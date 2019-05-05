@@ -1,0 +1,64 @@
+random_init() API BCrypt/Windows ok
+random_init() API BCrypt/Windows ok
+t_database() nouvelle common key=a7f16e3c1bdf8300
+t_database() nouvelle secret key=d702f171a4a6eb55
+random_init() API BCrypt/Windows ok
+t_database() nouvelle common key=777461c3fe5110c8
+t_database() nouvelle secret key=3c4712587a1e08a7
+random_init() API BCrypt/Windows ok
+t_database() nouvelle common key=49787aa9d5838005
+t_database() nouvelle secret key=fd698cf8618bc264
+random_init() API BCrypt/Windows ok
+t_database() nouvelle common key=34fa2b3bedd0f1f5
+t_database() nouvelle secret key=433bb26c869ac7f0
+random_init() API BCrypt/Windows ok
+t_database() nouvelle common key=7af7fc0f813eddb7
+t_database() nouvelle secret key=24fc2b4720ff606e
+random_init() API BCrypt/Windows ok
+t_database() nouvelle common key=b34c38edce4d0049
+t_database() nouvelle secret key=4ff760c104f8f8fd
+random_init() API BCrypt/Windows ok
+t_database() nouvelle common key=564ca94947a8835
+t_database() nouvelle secret key=b5f319f368c7d428
+random_init() API BCrypt/Windows ok
+t_database() nouvelle common key=dbee041844cdd0b9
+t_database() nouvelle secret key=fe282f20eb3dcc46
+emet_parts() riri generation de part pour le niveau 'common' x=1 y=8ca655c8..4f0fc5b8
+random_init() API BCrypt/Windows ok
+random_init() API BCrypt/Windows ok
+t_database() nouvelle common key=def0d6ff246b6ab6
+t_database() nouvelle secret key=5c32a24378bd80
+random_init() API BCrypt/Windows ok
+t_database() nouvelle common key=4cfbd86a291a246a
+t_database() nouvelle secret key=4f44996b9508b728
+emet_parts() riri generation de part pour le niveau 'common' x=1 y=8ca655c8..1
+emet_parts() riri generation de part pour le niveau 'secret' x=70001 y=8ca655c8..1
+random_init() API BCrypt/Windows ok
+t_database() nouvelle common key=7d6b493e7134e5e1
+t_database() nouvelle secret key=37472f0d96150f78
+emet_parts() riri generation de part pour le niveau 'common' x=1 y=f58ac6c8..5b75fd78
+emet_parts() riri generation de part pour le niveau 'secret' x=70001 y=dac5c77c..eb5fc09
+random_init() API BCrypt/Windows ok
+t_database() nouvelle common key=8d4cf54be84c5f84
+t_database() nouvelle secret key=777c6eff9c427e64
+random_init() API BCrypt/Windows ok
+t_database() nouvelle common key=27325df879ab0814
+t_database() nouvelle secret key=5c2a1c09dc6e90f1
+random_init() API BCrypt/Windows ok
+t_database() nouvelle common key=dcf71301770ea4c1
+t_database() nouvelle secret key=11f05fbfaf1eaf24
+random_init() API BCrypt/Windows ok
+t_database() nouvelle common key=519e7a3abc02068b
+t_database() nouvelle secret key=d1ce12742c0a5187
+emet_parts() riri generation de part pour le niveau 'common' x=1 y=38bc25a2..5b5b872e
+emet_parts() riri generation de part pour le niveau 'secret' x=70001 y=60da9983..6be1225
+random_init() API BCrypt/Windows ok
+t_database() nouvelle common key=cb2acf35020a087c
+t_database() nouvelle secret key=3f758ca5719b466d
+emet_parts() riri generation de part pour le niveau 'common' x=1 y=86b42b55..4807a1a3
+emet_parts() riri generation de part pour le niveau 'secret' x=70001 y=3d4b8e69..b013c76b
+random_init() API BCrypt/Windows ok
+t_database() nouvelle common key=300cfabd2fa42e48
+t_database() nouvelle secret key=505e6e34963fad11
+emet_parts() riri generation de part pour le niveau 'common' x=1 y=ab1a0d61..fd068674
+emet_parts() riri generation de part pour le niveau 'secret' x=70001 y=daef6515..8d5a0595

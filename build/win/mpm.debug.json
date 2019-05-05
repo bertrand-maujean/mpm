@@ -1,0 +1,67 @@
+{
+    "common_treshold": 2,
+    "secret_treshold": 3,
+    "next_id_holder": 5,
+    "holders": [
+        {
+            "common_nb_parts": 1,
+            "secret_nb_parts": 1,
+            "id_holder": 1,
+            "nickname": "riri",
+            "file_index": 0
+        },
+        {
+            "common_nb_parts": 1,
+            "secret_nb_parts": 1,
+            "id_holder": 2,
+            "nickname": "fifi",
+            "file_index": 1
+        },
+        {
+            "common_nb_parts": 1,
+            "secret_nb_parts": 1,
+            "id_holder": 3,
+            "nickname": "loulou",
+            "file_index": 2
+        },
+        {
+            "common_nb_parts": 1,
+            "secret_nb_parts": 1,
+            "id_holder": 4,
+            "nickname": "ber",
+            "file_index": 3
+        }
+    ],
+    "root_folder": {
+        "title": "Racine",
+        "id": 1,
+        "secrets": [
+            {
+                "title": "autre secret",
+                "id": 3,
+                "fields": [
+                    {
+                        "field_name": "user",
+                        "secret": "false",
+                        "piggy_banked": "false",
+                        "value": "duchnok"
+                    },
+                    {
+                        "field_name": "url",
+                        "secret": "false",
+                        "piggy_banked": "false",
+                        "value": "http://bidule.truc.tld"
+                    },
+                    {
+                        "field_name": "pwd",
+                        "secret": "true",
+                        "piggy_banked": "false",
+                        "value": "EDnryc34tteOw8dnGKt/eKMc2zuST9NhjCLA64AwY+0="
+                    }
+                ],
+                "aes_iv": "FOiQAKOBkE60lyVKabMs2w=="
+            }
+        ],
+        "sub_folders": []
+    }
+}

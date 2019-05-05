@@ -1,0 +1,614 @@
+[
+    { "id": "MSG_INIT_FILE1",
+      "msg": [
+            { "lang": "fr", "msg": "Erreur : une base est déjà ouverte\n" },
+            { "lang": "en", "msg": "Error : a database is already opened\n" }
+      ]
+    },
+    { "id": "MSG_INIT_FILE2",
+      "msg": [
+            { "lang": "fr", "msg": "Il faudrait la fermer d'abord...\n" },
+            { "lang": "en", "msg": "You should close it first\n" }
+      ]
+    },
+    { "id": "MSG_INIT_FILE3",
+      "msg": [
+            { "lang": "fr", "msg": "Initialisation d'une nouvelle base\n" },
+            { "lang": "en", "msg": "New database initialization\n" }  
+      ]  
+    },
+    { "id": "MSG_INIT_FILE4",
+      "msg": [
+            { "lang": "fr", "msg": "- Nom de fichier : " },
+			{ "lang": "en", "msg": "- File name : " }
+      ]
+    },
+	{ "id": "MSG_INIT_FILE5", 
+	   "msg" : [ 
+			{ "lang": "fr", "msg": "non fixé (sera demandé à la sauvegarde)\n" },
+			{ "lang": "en", "msg": "not set (will be asked when saving)" }
+	   ]
+	},
+	{ "id": "MSG_INIT_FILE7", 
+	  "msg" : [
+			{ "lang": "fr", "msg": "- Seuil pour ouverture 'secret' : " },
+			{ "lang": "en", "msg": "- Treshold for 'secret' level : " }
+	  ]
+	},
+	{ "id": "MSG_INIT_FILE6", 
+	  "msg" : [
+			{ "lang": "fr", "msg": "- Seuil pour ouverture 'common' : " },
+			{ "lang": "en", "msg": "- Treshold for 'common' level : " }
+	  ]
+	},
+	{ "id": "MSG_INIT_SAVE2", 
+	  "msg" : [
+			{ "lang": "fr", "msg": "Vous devriez en charger une avec 'load' ou en créer une avec 'init'\n" },
+			{ "lang": "en", "msg": "You should load one using 'load', or create on using 'init'\n" }
+	  ]
+	},
+	{ "id": "MSG_INIT_SAVE1", 
+	  "msg" : [
+			{ "lang": "fr", "msg": "Pas de base de secret chargée\n" }, 
+			{ "lang": "en", "msg": "No database loaded\n" }
+	  ]
+	},
+	{ "id": "MSG_INIT_SAVE3", 
+	  "msg" : [
+			{ "lang": "fr", "msg": "Pas de nom de fichier fourni." },
+			{ "lang": "en", "msg": "No filename provided." }
+	  ]
+	},
+	{ "id": "MSG_INIT_SAVE4", 
+	  "msg" : [
+			{ "lang": "fr", "msg": " Utilisez donc l'option à la commande 'save'\n" },
+			{ "lang": "en", "msg": " Use a parameter with 'save' command\n" }
+	  ]
+	},
+	{ "id": "MSG_INIT_SAVE5", 
+	  "msg" : [
+			{ "lang": "fr", "msg": "Attention : " },
+			{ "lang": "en", "msg": "Warning : " }
+	  ]
+	},
+	{ "id": "MSG_INIT_SAVE6", 
+	  "msg" : [
+			{ "lang": "fr", "msg": "Le nombre de parts distribuées est juste égal au nombre de parts nécessaires (utilisez 'check' et 'holders show').\nVous devriez en distribuer plus, de façon à pouvoir ouvrir la base en cas d'empêchement d'un des porteurs\n" } 
+	  ]
+	},
+	
+    { "id": "MSG_ERREUR_OPEN_FILE",
+      "msg": [
+            { "lang": "fr", "msg": "Erreur d'accès au fichier %s\n\n" },
+			{ "lang": "en", "msg": "Error accessing file %s\n\n" }
+      ]
+    },
+
+    { "id": "MSG_ERROR_SCOLON",
+      "msg": [
+            { "lang": "fr", "msg": "Erreur : " },
+			{ "lang": "en", "msg": "Error : " }
+      ]
+    },	
+
+    { "id": "MSG_INV_NICKNAME",
+      "msg": [
+            { "lang": "fr", "msg": "Nickname invalide\n" },
+			{ "lang": "en", "msg": "Invalid nickname\n" }
+      ]
+    },
+    { "id": "MSG_INVALID_ID",
+      "msg": [
+            { "lang": "fr", "msg": "ID incorrect\n" },
+			{ "lang": "en", "msg": "Invalid ID" }
+      ]
+    },
+
+    { "id": "MSG_FIRST_OK",
+      "msg": [
+            { "lang": "fr", "msg": "Accès au fichier Ok. Vous devez maintenant ouvrir des parts avec 'try'\n" },
+			{ "lang": "en", "msg": "File access ok. You should now open parts using 'try'" }
+      ]
+    },
+	
+	
+    { "id": "MSG_ERR_NO_FILENAME",
+      "msg": [
+            { "lang": "fr", "msg": "Erreur : pas de nom de fichier fourni." },
+			{ "lang": "en", "msg": "Error : no file name provided." }
+      ]
+    },
+
+    { "id": "MSG_ERR_NO_FILENAME",
+      "msg": [
+            { "lang": "fr", "msg": " Dans ce cas, ce n'est pas une option...\n" },
+			{ "lang": "en", "msg": " It is mandatory...\n" }
+      ]
+    },
+    { "id": "MSG_ERR_DB_ALREADY",
+      "msg": [
+            { "lang": "fr", "msg": "Erreur : une base est déjà ouverte\n" },
+			{ "lang": "en", "msg": "Error : a database is already opened" }
+      ]
+    },
+
+    { "id": "MSG_ERR_DB_ALREADY2",
+      "msg": [
+            { "lang": "fr", "msg": "Vous devez la fermer d'abord avec 'close'\n" },
+			{ "lang": "en", "msg": "You should close it first using 'close'" }
+      ]
+    },
+
+
+    { "id": "MSG_ERROR_FEW_DIS_PARTS",
+      "msg": [
+            { "lang": "fr", "msg": "Le nombre de parts distribuées est inférieur au nombre de parts nécessaires (utilisez 'check' et 'holders show').\nSi vous sauvegardiez la base en l'état, elle ne pourra plus jamais être ouverte.\nPour abandonner cette base, utilisez la commande 'quit'" },
+			{ "lang": "en", "msg": "To few parts distributed. Use 'check' and 'show holders' to see distributed parts. If database is saved now, it will never be possible to open it again. To discard this database, use 'quit'" }
+      ]
+    },
+
+    { "id": "MSG_ERROR_NO_DB",
+      "msg": [
+            { "lang": "fr", "msg": "Pas de base de secret chargée\n" },
+			{ "lang": "en", "msg": "No loaded database\n" }
+      ]
+    },
+
+    { "id": "MSG_ERROR_NO_DB2",
+      "msg": [
+            { "lang": "fr", "msg": "Vous devriez en charger une avec 'load' ou en créer une avec 'init'\n" },
+			{ "lang": "en", "msg": "You should load one using 'load', or create une using 'init'" }
+      ]
+    },
+
+    { "id": "MSG_GIVE_PWD",
+      "msg": [
+            { "lang": "fr", "msg": "\tEntrez le mot de passe de '%s' : " },
+			{ "lang": "en", "msg": "\tGive password for '%s' : " }
+      ]
+    },
+
+    { "id": "MSG_TRY_OK",
+      "msg": [
+            { "lang": "fr", "msg": "Ok. %s a apporte des parts %d/%d.\n" },
+			{ "lang": "en", "msg": "Ok. %s brought %d/%d parts.\n" }
+      ]
+    },
+
+    { "id": "MSG_TRY_NOK1",
+      "msg": [
+            { "lang": "fr", "msg": " Nickname inconnu ou mot de passe erroné.\n" },
+			{ "lang": "en", "msg": " Unkown nickname, or incorrect password.\n" }
+      ]
+    },
+
+    { "id": "MSG_TRY_NOK_ALREADY",
+      "msg": [
+            { "lang": "fr", "msg": " les parts de %s étaient déjà ouvertes.\n" },
+			{ "lang": "en", "msg": " Parts from '%s' were already opened.\n" }
+      ]
+    },
+
+
+    { "id": "MSG_TRY_NOK_INCONSISTENT",
+      "msg": [
+            { "lang": "fr", "msg": " incohérence dans la base.\n" },
+			{ "lang": "en", "msg": " inconsistent database.\n" }
+      ]
+    },
+
+
+    { "id": "MSG_CHECK1",
+      "msg": [
+            { "lang": "fr", "msg": "Pas de base de secret chargée\n" },
+			{ "lang": "en", "msg": "No loaded database\n" }
+      ]
+    },
+
+
+
+    { "id": "MSG_CHECK2",
+      "msg": [
+            { "lang": "fr", "msg": "Vous devriez en charger une avec 'load' ou en créer une avec 'init'\n" },
+			{ "lang": "en", "msg": "You should use 'load' or 'init'\n" }
+      ]
+    },
+
+
+    { "id": "MSG_CHECK3",
+      "msg": [
+            { "lang": "fr", "msg": "Base de donnée vierge. Vous devez créer des porteurs avant d'enregistrer\n" },
+			{ "lang": "en", "msg": "Blank database. You should create holders before saving it.\n" }
+      ]
+    },
+
+
+
+    { "id": "MSG_CHECK4",
+      "msg": [
+            { "lang": "fr", "msg": "Base de donnée fermée, aucun porteur n'a ouvert ses parts. Aucun moyen de distinguer la base de données aléatoires\n" },
+			{ "lang": "en", "msg": "Closed database, no holder gave its parts already. There is no way to distinguish a database from random bytes\n" }
+      ]
+    },
+
+
+    { "id": "MSG_CHECK5",
+      "msg": [
+            { "lang": "fr", "msg": "Un porteur au moins a ouvert ses parts, mais pas assez pour atteindre le niveau 'common'\n" },
+			{ "lang": "en", "msg": "At least one holder released its partes, but it's to few to reach 'common' level\n" }
+      ]
+    },
+
+
+    { "id": "MSG_CHECK6",
+      "msg": [
+            { "lang": "fr", "msg": "La base est ouverte au niveau 'common'. Les sercrets restent cachés. Il n'est pas possible de rajouter des porteurs.\n" },
+			{ "lang": "en", "msg": "Database opened at 'common' level. Secrets are still hidden. Holder changes are not possible.\n" }
+      ]
+    },
+
+
+    { "id": "MSG_CHECK7",
+      "msg": [
+            { "lang": "fr", "msg": "La base est ouverte y compris au niveau 'secret'. Tout est éditable. Il est possible de rajouter de nouveaux porteurs.\n" },
+			{ "lang": "en", "msg": "Database opened at 'secret' level. Everything is editable. Holder add/remove is possible.\n" }
+      ]
+    },
+
+    { "id": "MSG_CHECK_NBP",
+      "msg": [
+            { "lang": "fr", "msg": "\nNombre de parts : \n" },
+			{ "lang": "en", "msg": "\nNumber of parts : \n" }
+      ]
+    },
+
+    { "id": "MSG_CHECK_NB1",
+      "msg": [
+            { "lang": "fr", "msg": "              Dispo.   Necess.  Distrib.  \n" },
+			{ "lang": "en", "msg": "              Avail.   Needed   Given     \n" }
+      ]
+    },
+
+    { "id": "MSG_CHECK_WARN",
+      "msg": [
+            { "lang": "fr", "msg": "\nAttention : " },
+			{ "lang": "en", "msg": "\nWarning : " }
+      ]
+    },
+
+    { "id": "MSG_CHECK_JUST_ENOUGH",
+      "msg": [
+            { "lang": "fr", "msg": "Le nombre de parts distribuées est juste égal ou inférieur au nombre de parts nécessaires (utilisez 'show holders').\nVous devriez en distribuer plus, de façon à pouvoir ouvrir la base, même en cas d'empêchement d'un des porteurs\n" },
+			{ "lang": "en", "msg": "Number of given parts just equal or below number of needed parts. You should distribute some more parts in order to recover the database in case of empediment of a holder\n" }
+      ]
+    },
+
+    { "id": "MSG_CHECK_WARN_FIRST",
+      "msg": [
+            { "lang": "fr", "msg": "Attention : base ouverte au niveau 'first', le décompte des parts distribuées n'est pas complet\n" },
+			{ "lang": "en", "msg": "Warning : database open at 'first' level. The count of given parts may be incomplete\n" }
+      ]
+    },
+
+    { "id": "MSG_CHECK_CHANGED1",
+      "msg": [
+            { "lang": "fr", "msg": "La base a été modifiée. " },
+			{ "lang": "en", "msg": "Database has been changed. " }
+      ]
+    },
+
+    { "id": "MSG_NEW_HOLDER_ERR_ALREADY",
+      "msg": [
+            { "lang": "fr", "msg": "Ce holder existe déjà, ou ce nickname est déjà utilisé.\n" },
+			{ "lang": "en", "msg": "Nickname already in use.\n" }
+      ]
+    },
+
+    { "id": "MSG_NEW_HOLDER_NOT_SECRET",
+      "msg": [
+            { "lang": "fr", "msg": "Vous devez être en niveau 'secret' pour manipuler les porteurs\n" },
+			{ "lang": "en", "msg": "Database must be opened at 'secret' level to modify holders.\n" }
+      ]
+    },
+
+    { "id": "MSG_NEW_HOLDER_GIVE_PWD",
+      "msg": [
+            { "lang": "fr", "msg": "\tDonnez un mot de passe pour ce nouveau porteur : " },
+			{ "lang": "en", "msg": "\tGive a password for this holder : " }
+      ]
+    },
+
+
+    { "id": "MSG_NEW_HOLDER_CONFIRM_PWD",
+      "msg": [
+            { "lang": "fr", "msg": "\tConfirmez le mot de passe : " },
+			{ "lang": "en", "msg": "\tConfirm password : " }
+      ]
+    },
+
+    { "id": "MSG_ERR_PWD_CONFIRM",
+      "msg": [
+            { "lang": "fr", "msg": "Erreur : confirmation du mot de passe incorrecte." },
+			{ "lang": "en", "msg": "Error : confirmation does not match." }
+      ]
+    },
+
+    { "id": "MSG_NEW_HOLDER_OK",
+      "msg": [
+            { "lang": "fr", "msg": "\tNouveau porteur (id=%d '%s') créé. Ses parts sont disponibles, et vous pouvez en changer le nombre.\n" },
+			{ "lang": "en", "msg": "\tNew holder created (id=%d %s). His parts are available, and you can modify their quantity.\n" }
+      ]
+    },
+
+    { "id": "MSG_SHOW_HOLD1",
+      "msg": [
+            { "lang": "fr", "msg": "Porteurs déclarés dont les parts sont débloquées (nickname / nb parts common / nb parts secret / email):\n" },
+			{ "lang": "en", "msg": "Holders who's parts are available (nickname / number of common parts / nb secret parts / e-mail)\n" }
+      ]
+    },
+
+    { "id": "MSG_SHOW_HOLD2",
+      "msg": [
+            { "lang": "fr", "msg": "Aucun porteur n'est encore connu dans cette base\n" },
+			{ "lang": "en", "msg": "No known holder yet" }
+      ]
+    },
+
+    { "id": "MSG_INV_EMAIL",
+      "msg": [
+            { "lang": "fr", "msg": "Adresse e-mail invalide\n" },
+			{ "lang": "en", "msg": "Invalid e-mail address" }
+      ]
+    },
+
+
+    { "id": "MSG_FAIL",
+      "msg": [
+            { "lang": "fr", "msg": "Echec \n" },
+			{ "lang": "en", "msg": "Failure \n" }
+      ]
+    },
+
+    { "id": "MSG_SHOW_HOLD3",
+      "msg": [
+            { "lang": "fr", "msg": "Nombre de holders encore inconnu dans cet état\n" },
+			{ "lang": "en", "msg": "Number of holder still unkown in this state\n" }
+      ]
+    },
+
+    { "id": "MSG_SHOW_HOLD4",
+      "msg": [
+            { "lang": "fr", "msg": "Porteurs n'ayant pas débloqué leurs parts :\n" },
+			{ "lang": "en", "msg": "Holders who didn't release their parts :\n" }
+      ]
+    },
+
+    { "id": "MSG_SHOW_HOLD5",
+      "msg": [
+            { "lang": "fr", "msg": "Nombre total de holders détecté : " },
+			{ "lang": "en", "msg": "Total number of detected holders : " }
+      ]
+    },
+
+    { "id": "MSG_DEL_HOLD1",
+      "msg": [
+            { "lang": "fr", "msg": "Suppression impossible : " },
+			{ "lang": "en", "msg": "Deletion impossible : " }
+      ]
+    },
+		
+    { "id": "MSG_DEL_HOLD2",
+      "msg": [
+            { "lang": "fr", "msg": "Vous devez distribuer plus de parts au préalable.\nUtilisez les commandes 'check' et 'holders show' pour voir les parts distribuées\n" },
+			{ "lang": "en", "msg": "You must distribute more parts. Use 'check' and 'show holders' to see distributed parts.\n" }
+      ]
+    },		
+		
+    { "id": "MSG_DEL_HOLD_OK",
+      "msg": [
+            { "lang": "fr", "msg": "Suppression ok\n" },
+			{ "lang": "en", "msg": "Deleted\n" }
+      ]
+    },		
+
+    { "id": "MSG_CWD",
+      "msg": [
+            { "lang": "fr", "msg": "chemin actuel :" },
+			{ "lang": "en", "msg": "Current folder :" }
+      ]
+    },
+
+    { "id": "MSG_CHDIR",
+      "msg": [
+            { "lang": "fr", "msg": "changement de répertoire vers '%s'\n" },
+			{ "lang": "en", "msg": "Changed current folder to '%s'\n" }
+      ]
+    },
+
+    { "id": "MSG_LS1",
+      "msg": [
+            { "lang": "fr", "msg": "Dossier courant : [%d] %s\n\n" },
+			{ "lang": "en", "msg": "Current folder [%d] %s\n\n" }
+      ]
+    },
+
+    { "id": "MSG_LS2",
+      "msg": [
+            { "lang": "fr", "msg": "Sous-dossiers :\n" },
+			{ "lang": "en", "msg": "Sub-folders :\n" }
+      ]
+    },
+
+    { "id": "MSG_LS3",
+      "msg": [
+            { "lang": "fr", "msg": "Entrées de secrets :\n" },
+			{ "lang": "en", "msg": "Secrets :\n" }
+      ]
+    },
+
+    { "id": "MSG_NEWFOLD1",
+      "msg": [
+            { "lang": "fr", "msg": "Titre du nouveau dossier ? " },
+			{ "lang": "en", "msg": "Title for the new folder ? " }
+      ]
+    },
+
+    { "id": "MSG_NEWFOLD2",
+      "msg": [
+            { "lang": "fr", "msg": "ID du nouveau dossier = %d\n" },
+			{ "lang": "en", "msg": "ID for the new folder is %d\n" }
+      ]
+    },
+
+
+
+
+    { "id": "MSG_EDSEC1",
+      "msg": [
+            { "lang": "fr", "msg": "Erreur : dialogue de revue de tous les champs pas encore implémenté\n" },
+			{ "lang": "en", "msg": "Error : not implemented yet" }
+      ]
+    },
+
+    { "id": "MSG_EDSEC2",
+      "msg": [
+            { "lang": "fr", "msg": "Nom de champ incorrect\n" },
+			{ "lang": "en", "msg": "Field name invalid\n" }
+      ]
+    },
+
+
+    { "id": "MSG_EDSEC3",
+      "msg": [
+            { "lang": "fr", "msg": "Valeur actuel du champ [%s] : " },
+			{ "lang": "en", "msg": "Current field value [%s] :" }
+      ]
+    },
+
+    { "id": "MSG_EDSEC4",
+      "msg": [
+            { "lang": "fr", "msg": "Nouveau champ.\n" },
+			{ "lang": "en", "msg": "New field.\n" }
+      ]
+    },
+
+    { "id": "MSG_EDSEC5",
+      "msg": [
+            { "lang": "fr", "msg": "Entrez la nouvelle valeur de ce champ : " },
+			{ "lang": "en", "msg": "Give the new value for this field : " }
+      ]
+    },
+
+    { "id": "MSG_SEC_DEL_FIELD",
+      "msg": [
+            { "lang": "fr", "msg": "Champ inexistant\n" },
+			{ "lang": "en", "msg": "Non existing field\n" }
+      ]
+    },
+
+    { "id": "MSG_ED_SEC_TITLE",
+      "msg": [
+            { "lang": "fr", "msg": "Titre actuel [%d] : " },
+			{ "lang": "en", "msg": "Current title [%d] : " }
+      ]
+    },
+
+    { "id": "MSG_ED_SEC_TITLE2",
+      "msg": [
+            { "lang": "fr", "msg": "Entrez un nouveau titre : " },
+			{ "lang": "en", "msg": "Give new title : " }
+      ]
+    },
+
+    { "id": "MSG_DELETE_ID",
+      "msg": [
+            { "lang": "fr", "msg": " Suppression de '%s' : confirmez (o/n) " },
+			{ "lang": "en", "msg": " Deleting '%s' : confirm (o/n) " }
+      ]
+    },
+
+    { "id": "MSG_DELETE_ID2",
+      "msg": [
+            { "lang": "fr", "msg": "Erreur : dossier non vide." },
+			{ "lang": "en", "msg": "Error : folder is not empty." }
+      ]
+    },
+
+    { "id": "MSG_DELETE_ID3",
+      "msg": [
+            { "lang": "fr", "msg": " Utilisez 'force'\n" },
+			{ "lang": "en", "msg": " Us 'force'\n" }
+      ]
+    },
+
+    { "id": "MSG_DELETE_ID4",
+      "msg": [
+            { "lang": "fr", "msg": " - annulé\n" },
+			{ "lang": "en", "msg": " - canceled\n" }
+      ]
+    },
+
+    { "id": "MSG_SHSEC1",
+      "msg": [
+            { "lang": "fr", "msg": "Secret [" },
+			{ "lang": "en", "msg": "Secret [" }
+      ]
+    },
+
+    { "id": "MSG_SHSEC2",
+      "msg": [
+            { "lang": "fr", "msg": "Contenu :\n" },
+			{ "lang": "en", "msg": "Content :\n" }
+      ]
+    },
+
+    { "id": "MSG_SHSEC3",
+      "msg": [
+            { "lang": "fr", "msg": "base pas ouverte au niveau 'secret'\n" },
+			{ "lang": "en", "msg": "Database not open at 'secret' level" }
+      ]
+    },
+
+    { "id": "MSG_EMPTY",
+      "msg": [
+            { "lang": "fr", "msg": "(vide)\n" },
+			{ "lang": "en", "msg": "(empty)" }
+      ]
+    },
+
+
+    { "id": "MSG_INVALID_FIELD",
+      "msg": [
+            { "lang": "fr", "msg": "Nom de champ incorrect ou inexistant\n" },
+			{ "lang": "en", "msg": "Incorrect or inexistant field name" }
+      ]
+    },
+
+    { "id": "MSG_NEW_SEC2",
+      "msg": [
+            { "lang": "fr", "msg": "id du nouveau secret : " },
+			{ "lang": "en", "msg": "id for the new secret : " }
+      ]
+    },
+
+    { "id": "MSG_NEW_SEC1",
+      "msg": [
+            { "lang": "fr", "msg": "Donnez un titre à ce secret : " },
+			{ "lang": "en", "msg": "Give a title for this new secret : " }
+      ]
+    }
+
+	
+]
+
+
+
+
+
+
+
+
+
+
+
+

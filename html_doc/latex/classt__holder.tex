@@ -1,0 +1,505 @@
+\hypertarget{classt__holder}{}\section{t\+\_\+holder Class Reference}
+\label{classt__holder}\index{t\+\_\+holder@{t\+\_\+holder}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classt__holder_aa8151374dbbb1582f0939c0dad5f50ba}{t\+\_\+holder} (char $\ast$nn, \hyperlink{classt__database}{t\+\_\+database} $\ast$db\+\_\+)
+\begin{DoxyCompactList}\small\item\em Ppour création d\textquotesingle{}une holder nouvelle qui n\textquotesingle{}existait pas avant, à partir d\textquotesingle{}un nouveau nickname. \end{DoxyCompactList}\item 
+\hyperlink{classt__holder_a3d8839ea25d970d538026a812d4e0e52}{t\+\_\+holder} (char $\ast$nn, \hyperlink{classt__database}{t\+\_\+database} $\ast$db\+\_\+, \hyperlink{structt__chunk__holder}{t\+\_\+chunk\+\_\+holder} $\ast$\hyperlink{classt__holder_a90ca7d49e0d605f1652d20eec3ae56e3}{chunk}, int file\+\_\+index\+\_\+, unsigned char $\ast$pkey\+\_\+)
+\begin{DoxyCompactList}\small\item\em Pour création d\textquotesingle{}une holder d\textquotesingle{}après un chunk lu avant ouverture de la base common. \end{DoxyCompactList}\item 
+\hyperlink{classt__holder_a361942a714f21ef8be1faba7e49e53f0}{$\sim$t\+\_\+holder} ()
+\item 
+\mbox{\Hypertarget{classt__holder_a6390402dafe48f986eab7315d078ac5b}\label{classt__holder_a6390402dafe48f986eab7315d078ac5b}} 
+void {\bfseries load\+\_\+chunk} ()
+\item 
+void \hyperlink{classt__holder_a169fe1cbdec140ea60b57286f830c2c7}{save\+\_\+chunk} (F\+I\+LE $\ast$fichier)
+\begin{DoxyCompactList}\small\item\em Ecrit le chunk dans le fichier. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classt__holder_a6514339448b04e75586c0313b51b90c5}\label{classt__holder_a6514339448b04e75586c0313b51b90c5}} 
+void {\bfseries load\+\_\+common} ()
+\item 
+\mbox{\Hypertarget{classt__holder_a150cbbb4b6adbf78a40fea1dc40047ea}\label{classt__holder_a150cbbb4b6adbf78a40fea1dc40047ea}} 
+void {\bfseries change\+\_\+password} ()
+\item 
+\mbox{\Hypertarget{classt__holder_a580a59e39b8eb29a92113c1526ea4c36}\label{classt__holder_a580a59e39b8eb29a92113c1526ea4c36}} 
+void {\bfseries show\+Details} ()
+\item 
+\mbox{\Hypertarget{classt__holder_a4b1f8ddf75f2655b02997c238c464a31}\label{classt__holder_a4b1f8ddf75f2655b02997c238c464a31}} 
+void {\bfseries get\+Parts} ()
+\item 
+int \hyperlink{classt__holder_aa7461956a8d02ec385f2c336e1625c0e}{is\+\_\+nickname} (char $\ast$nn)
+\begin{DoxyCompactList}\small\item\em Teste le nickname. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{classt__holder_a2cb08e23684d848bf498050de31874c2}{get\+\_\+email} ()
+\begin{DoxyCompactList}\small\item\em Renvoie le pointeur sur la chaine contenant l\textquotesingle{}email. \end{DoxyCompactList}\item 
+void \hyperlink{classt__holder_a15589251a3a9a508b0ec04bb565d24c9}{set\+\_\+email} (char $\ast$em)
+\begin{DoxyCompactList}\small\item\em Fixe l\textquotesingle{}email. \end{DoxyCompactList}\item 
+int \hyperlink{classt__holder_a00ab33ab1bbe0d29f2c0ade8f767d993}{get\+\_\+nb\+\_\+common} ()
+\begin{DoxyCompactList}\small\item\em Renvoie le nombre de parts sont dispose cette holder, pour le niveau common. \end{DoxyCompactList}\item 
+bool \hyperlink{classt__holder_a0161af13d174c68725a401f12c1c2232}{set\+\_\+nb\+\_\+common} (int n)
+\begin{DoxyCompactList}\small\item\em Modifie le nombre de parts portées par cette holder, pour le niveau common. \end{DoxyCompactList}\item 
+int \hyperlink{classt__holder_a01e3dcac731099c4e41a5ea375c5bbc1}{get\+\_\+nb\+\_\+secret} ()
+\begin{DoxyCompactList}\small\item\em Renvoie le nombre de parts sont dispose cette holder, pour le niveau secret. \end{DoxyCompactList}\item 
+bool \hyperlink{classt__holder_abd1722834ceb39539af2444612f28760}{set\+\_\+nb\+\_\+secret} (int n)
+\begin{DoxyCompactList}\small\item\em Modifie le nombre de parts portées par cette holder, pour le niveau secret. \end{DoxyCompactList}\item 
+int \hyperlink{classt__holder_a6e258c7a0de7e7f4c5508af8a0aa8378}{get\+\_\+id\+\_\+holder} ()
+\begin{DoxyCompactList}\small\item\em Renvoie l\textquotesingle{}ID de holder. \end{DoxyCompactList}\item 
+void \hyperlink{classt__holder_a08e5c20156dba916f67fb2861d0a79be}{set\+\_\+password} (char $\ast$mdp)
+\begin{DoxyCompactList}\small\item\em Change le mot de passe. \end{DoxyCompactList}\item 
+int \hyperlink{classt__holder_a350849be70b8ed9acd165ec1cf9e4e96}{try\+\_\+tardif} (char $\ast$password)
+\begin{DoxyCompactList}\small\item\em Complète les informations d\textquotesingle{}une holder qui a participé à l\textquotesingle{}ouverture common, une fois que la la base common est disponible. \end{DoxyCompactList}\item 
+bool \hyperlink{classt__holder_a0c5f8f994532f9bdf72f870d9c66e2b1}{test\+\_\+password} (char $\ast$mdp)
+\begin{DoxyCompactList}\small\item\em Teste le MdP d\textquotesingle{}un holder par rapport à un MdP proposé \end{DoxyCompactList}\item 
+void \hyperlink{classt__holder_ace602439e9c0675405f0bf6d6d46157f}{compte\+\_\+parts\+\_\+disponibles} (int $\ast$common\+\_\+, int $\ast$secret\+\_\+)
+\begin{DoxyCompactList}\small\item\em Génère le json pour cette holder. \end{DoxyCompactList}\item 
+void \hyperlink{classt__holder_aa79a75527ffcb877408da759d7b3bbd1}{compte\+\_\+parts\+\_\+distribuees} (int $\ast$common\+\_\+, int $\ast$secret\+\_\+)
+\begin{DoxyCompactList}\small\item\em Calcule le nb de parts distribuées. \end{DoxyCompactList}\item 
+void \hyperlink{classt__holder_aa69ee8318b98c9b2710406a058592e5d}{compte\+\_\+parts\+\_\+necessaires} (int $\ast$common\+\_\+, int $\ast$secret\+\_\+)
+\begin{DoxyCompactList}\small\item\em Calcule le nb de parts treshold d\textquotesingle{}après ce holder. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classt__holder_a71a34bd7bad474898cfba872930b27ce}\label{classt__holder_a71a34bd7bad474898cfba872930b27ce}} 
+char $\ast$ \hyperlink{classt__holder_a71a34bd7bad474898cfba872930b27ce}{nickname}
+\begin{DoxyCompactList}\small\item\em Le nickname de la holderne. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classt__holder_a506b27b697fd6517c34778dff6a6e69b}\label{classt__holder_a506b27b697fd6517c34778dff6a6e69b}} 
+char $\ast$ \hyperlink{classt__holder_a506b27b697fd6517c34778dff6a6e69b}{email}
+\begin{DoxyCompactList}\small\item\em L\textquotesingle{}email de la holderne, ou N\+U\+LL si pas d\textquotesingle{}email. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classt__holder_abd8642ba4e6c9fb50d7cd874dbcf27c1}\label{classt__holder_abd8642ba4e6c9fb50d7cd874dbcf27c1}} 
+uint16\+\_\+t \hyperlink{classt__holder_abd8642ba4e6c9fb50d7cd874dbcf27c1}{id\+\_\+holder}
+\begin{DoxyCompactList}\small\item\em L\textquotesingle{}ID de la holderne, unique. Fixé à la création. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classt__holder_a5dcd5b0a7488b64b6ac51dfdc6a4b8ac}\label{classt__holder_a5dcd5b0a7488b64b6ac51dfdc6a4b8ac}} 
+uint16\+\_\+t \hyperlink{classt__holder_a5dcd5b0a7488b64b6ac51dfdc6a4b8ac}{chunk\+\_\+status}
+\begin{DoxyCompactList}\small\item\em Où en est cette holderne par rapport à son chunk dans le fichier. Utilise les constantes H\+O\+L\+D\+E\+R\+\_\+\+C\+H\+U\+N\+K\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+xxx. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classt__holder_ac8652a9b7c720e24f221ef5826b8912d}\label{classt__holder_ac8652a9b7c720e24f221ef5826b8912d}} 
+unsigned char \hyperlink{classt__holder_ac8652a9b7c720e24f221ef5826b8912d}{salt1} \mbox{[}32\mbox{]}
+\begin{DoxyCompactList}\small\item\em Pour le chunk -\/ reconnaissance. Sera mis dans le chunk lors du save() \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classt__holder_a948ebbd48f47f539c7a8d084e7dcf216}\label{classt__holder_a948ebbd48f47f539c7a8d084e7dcf216}} 
+unsigned char \hyperlink{classt__holder_a948ebbd48f47f539c7a8d084e7dcf216}{salt2} \mbox{[}32\mbox{]}
+\begin{DoxyCompactList}\small\item\em Pour le chunk -\/ chiffrement. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classt__holder_a3f1e5ce4676ad676ff7630d25a3f882c}\label{classt__holder_a3f1e5ce4676ad676ff7630d25a3f882c}} 
+unsigned char \hyperlink{classt__holder_a3f1e5ce4676ad676ff7630d25a3f882c}{pkey} \mbox{[}32\mbox{]}
+\begin{DoxyCompactList}\small\item\em initialisé à S\+H\+A256(nickname $\vert$ salt2 $\vert$ password) à chaque chgt de MdP. N\textquotesingle{}est pas stocké dans le chunk. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classt__holder_af3297af4386544c09f00902e76f7d8ec}\label{classt__holder_af3297af4386544c09f00902e76f7d8ec}} 
+unsigned char \hyperlink{classt__holder_af3297af4386544c09f00902e76f7d8ec}{hash} \mbox{[}32\mbox{]}
+\begin{DoxyCompactList}\small\item\em initialisé à sha256(salt1 $\vert$ password) à chaque chgt de MdP -\/ reconnaissance des chunks dans le fichier \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classt__holder_ad407a00366aadc652d9f77bfeaf95bdf}\label{classt__holder_ad407a00366aadc652d9f77bfeaf95bdf}} 
+bool \hyperlink{classt__holder_ad407a00366aadc652d9f77bfeaf95bdf}{password\+\_\+set}
+\begin{DoxyCompactList}\small\item\em indique si le MdP a été initialisé, lors des créations de nouvelles holdernes \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classt__holder_a9f6d3baa5ff22f741c0bcc12088c65e8}\label{classt__holder_a9f6d3baa5ff22f741c0bcc12088c65e8}} 
+unsigned char \hyperlink{classt__holder_a9f6d3baa5ff22f741c0bcc12088c65e8}{parts} \mbox{[}C\+H\+U\+N\+K\+\_\+\+M\+A\+X\+\_\+\+P\+A\+R\+TS $\ast$32\mbox{]}
+\begin{DoxyCompactList}\small\item\em les parts. une holderne peut porter au maximum 8 parts common+secret \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classt__holder_a05f607c47e6a85a28d5bb3054cb8da39}\label{classt__holder_a05f607c47e6a85a28d5bb3054cb8da39}} 
+uint64\+\_\+t \hyperlink{classt__holder_a05f607c47e6a85a28d5bb3054cb8da39}{xparts} \mbox{[}C\+H\+U\+N\+K\+\_\+\+M\+A\+X\+\_\+\+P\+A\+R\+TS\mbox{]}
+\begin{DoxyCompactList}\small\item\em Les parts X. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classt__holder_a90ca7d49e0d605f1652d20eec3ae56e3}\label{classt__holder_a90ca7d49e0d605f1652d20eec3ae56e3}} 
+unsigned char \hyperlink{classt__holder_a90ca7d49e0d605f1652d20eec3ae56e3}{chunk} \mbox{[}C\+H\+U\+N\+K\+\_\+\+H\+O\+L\+D\+E\+R\+\_\+\+S\+I\+ZE\mbox{]}
+\begin{DoxyCompactList}\small\item\em Le bloc dans le fichier M\+PM, déchiffré ou non selon chunk\+\_\+status. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classt__holder_a51e696376d22ff824f6aef96f0513ecd}\label{classt__holder_a51e696376d22ff824f6aef96f0513ecd}} 
+uint16\+\_\+t \hyperlink{classt__holder_a51e696376d22ff824f6aef96f0513ecd}{common\+\_\+nb\+\_\+parts}
+\begin{DoxyCompactList}\small\item\em nombre de part que détient cette holder pour l\textquotesingle{}accès \char`\"{}common\char`\"{} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classt__holder_a0d5a539a2039ba0ecc36abac0f5795ad}\label{classt__holder_a0d5a539a2039ba0ecc36abac0f5795ad}} 
+uint16\+\_\+t \hyperlink{classt__holder_a0d5a539a2039ba0ecc36abac0f5795ad}{secret\+\_\+nb\+\_\+parts}
+\begin{DoxyCompactList}\small\item\em nombre de part que détient cette holder pour l\textquotesingle{}accès \char`\"{}secret\char`\"{} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classt__holder_a3f27e169518bb716f029fa762f410167}\label{classt__holder_a3f27e169518bb716f029fa762f410167}} 
+int \hyperlink{classt__holder_a3f27e169518bb716f029fa762f410167}{file\+\_\+index}
+\begin{DoxyCompactList}\small\item\em position du chunk dans le fichier. Réinitialisé pendant la sauvegarde \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classt__holder_af80fd2f7bd7d4b66fc13f8751d8d7411}\label{classt__holder_af80fd2f7bd7d4b66fc13f8751d8d7411}} 
+\hyperlink{classt__database}{t\+\_\+database} $\ast$ \hyperlink{classt__holder_af80fd2f7bd7d4b66fc13f8751d8d7411}{db}
+\begin{DoxyCompactList}\small\item\em la database de rattachement. On en a besoin pour invoquer lsss\+\_\+$\ast$ par exemple \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe \char`\"{}holder\char`\"{}
+
+\begin{DoxyNote}{Note}
+Façon de créer un objet de type holder
+\begin{DoxyItemize}
+\item Création d\textquotesingle{}une nouvelle holder
+\begin{DoxyItemize}
+\item appel du constructeur pour créer une holder à partir de son nickname. Créé en chunk\+\_\+status=H\+O\+L\+D\+E\+R\+\_\+\+C\+H\+U\+N\+K\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+N\+O\+NE (=absent sur disque)
+\item enitèrement qualifié au départ, mais le chunk n\textquotesingle{}est pas initialisé. Il le sera à l\textquotesingle{}appel à la méthode \hyperlink{classt__holder_a169fe1cbdec140ea60b57286f830c2c7}{save\+\_\+chunk()}
+\end{DoxyItemize}
+\item Ouverture précoce, c\textquotesingle{}est à dire try avant l\textquotesingle{}ouverture de la base common
+\begin{DoxyItemize}
+\item création par le constructeur à partir d\textquotesingle{}un nickname, file\+\_\+index, pkey, chunk déchiffré. chunk\+\_\+status=H\+O\+L\+D\+E\+R\+\_\+\+C\+H\+U\+N\+K\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+O\+P\+EN
+\item ensuite, lorsque la base common sera ouverte, on réappelle complete\+\_\+ouverture() pour intégrer les informations qui sont dans la base common mais pas dans le cunk holder
+\end{DoxyItemize}
+\item Ouverture tardive, c\textquotesingle{}est à dire try après que la base common soit ouverte
+\begin{DoxyItemize}
+\item Cas de la holder qui permet l\textquotesingle{}ouverture du niveau secret
+\item La holder a été créée avant le try, à l\textquotesingle{}ouverture de la base common. Mais alors on a fixé chunk\+\_\+status=H\+O\+L\+D\+E\+R\+\_\+\+C\+H\+U\+N\+K\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+C\+L\+O\+S\+ED
+\item L\textquotesingle{}appel à \hyperlink{classt__holder_a350849be70b8ed9acd165ec1cf9e4e96}{try\+\_\+tardif()} permet de déchiffrer le chunk, et de passer en chunk\+\_\+status=H\+O\+L\+D\+E\+R\+\_\+\+C\+H\+U\+N\+K\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+O\+P\+EN 
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyNote}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classt__holder_aa8151374dbbb1582f0939c0dad5f50ba}\label{classt__holder_aa8151374dbbb1582f0939c0dad5f50ba}} 
+\index{t\+\_\+holder@{t\+\_\+holder}!t\+\_\+holder@{t\+\_\+holder}}
+\index{t\+\_\+holder@{t\+\_\+holder}!t\+\_\+holder@{t\+\_\+holder}}
+\subsubsection{\texorpdfstring{t\+\_\+holder()}{t\_holder()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily t\+\_\+holder\+::t\+\_\+holder (\begin{DoxyParamCaption}\item[{char $\ast$}]{nn,  }\item[{\hyperlink{classt__database}{t\+\_\+database} $\ast$}]{db\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Ppour création d\textquotesingle{}une holder nouvelle qui n\textquotesingle{}existait pas avant, à partir d\textquotesingle{}un nouveau nickname. 
+
+Constructeur 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em nn} & Le nickname de la holder à créer \\
+\hline
+\mbox{\tt in}  & {\em db\+\_\+} & Lien vers la base, car on en a besoin par moment \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+
+\begin{DoxyItemize}
+\item Chunk\+\_\+status=H\+O\+L\+D\+E\+R\+\_\+\+C\+H\+U\+N\+K\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+N\+O\+NE car le chunk n\textquotesingle{}est pas écrit sur disque
+\item Chunk initialisé aléatoirement, parts générées en invoquant le sss de la db\+\_\+ 
+\end{DoxyItemize}
+\end{DoxyNote}
+\mbox{\Hypertarget{classt__holder_a3d8839ea25d970d538026a812d4e0e52}\label{classt__holder_a3d8839ea25d970d538026a812d4e0e52}} 
+\index{t\+\_\+holder@{t\+\_\+holder}!t\+\_\+holder@{t\+\_\+holder}}
+\index{t\+\_\+holder@{t\+\_\+holder}!t\+\_\+holder@{t\+\_\+holder}}
+\subsubsection{\texorpdfstring{t\+\_\+holder()}{t\_holder()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily t\+\_\+holder\+::t\+\_\+holder (\begin{DoxyParamCaption}\item[{char $\ast$}]{nn,  }\item[{\hyperlink{classt__database}{t\+\_\+database} $\ast$}]{db\+\_\+,  }\item[{\hyperlink{structt__chunk__holder}{t\+\_\+chunk\+\_\+holder} $\ast$}]{chunk\+\_\+,  }\item[{int}]{file\+\_\+index\+\_\+,  }\item[{unsigned char $\ast$}]{pkey\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Pour création d\textquotesingle{}une holder d\textquotesingle{}après un chunk lu avant ouverture de la base common. 
+
+Constructeur 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em nn} & Le nickname de la holder à créer \\
+\hline
+\mbox{\tt in}  & {\em db\+\_\+} & Lien vers la base, car on en a besoin par moment \\
+\hline
+\mbox{\tt in}  & {\em chunk} & Le chunk lu et déchiffré \\
+\hline
+\mbox{\tt in}  & {\em file\+\_\+index} & Transmis par le try() et à conserver \\
+\hline
+\mbox{\tt in}  & {\em pkey} & Transmis par le try() et à conserver. On ne pourrait pas le recalculer car on ne conserve pas le MdP plus que ça \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+
+\begin{DoxyItemize}
+\item Chunk\+\_\+status=H\+O\+L\+D\+E\+R\+\_\+\+C\+H\+U\+N\+K\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+O\+P\+EN car le chunk est présent sur disque, et déchiffré 
+\end{DoxyItemize}
+\end{DoxyNote}
+\mbox{\Hypertarget{classt__holder_a361942a714f21ef8be1faba7e49e53f0}\label{classt__holder_a361942a714f21ef8be1faba7e49e53f0}} 
+\index{t\+\_\+holder@{t\+\_\+holder}!````~t\+\_\+holder@{$\sim$t\+\_\+holder}}
+\index{````~t\+\_\+holder@{$\sim$t\+\_\+holder}!t\+\_\+holder@{t\+\_\+holder}}
+\subsubsection{\texorpdfstring{$\sim$t\+\_\+holder()}{~t\_holder()}}
+{\footnotesize\ttfamily t\+\_\+holder\+::$\sim$t\+\_\+holder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+destructeur 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classt__holder_ace602439e9c0675405f0bf6d6d46157f}\label{classt__holder_ace602439e9c0675405f0bf6d6d46157f}} 
+\index{t\+\_\+holder@{t\+\_\+holder}!compte\+\_\+parts\+\_\+disponibles@{compte\+\_\+parts\+\_\+disponibles}}
+\index{compte\+\_\+parts\+\_\+disponibles@{compte\+\_\+parts\+\_\+disponibles}!t\+\_\+holder@{t\+\_\+holder}}
+\subsubsection{\texorpdfstring{compte\+\_\+parts\+\_\+disponibles()}{compte\_parts\_disponibles()}}
+{\footnotesize\ttfamily void t\+\_\+holder\+::compte\+\_\+parts\+\_\+disponibles (\begin{DoxyParamCaption}\item[{int $\ast$}]{common\+\_\+,  }\item[{int $\ast$}]{secret\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Génère le json pour cette holder. 
+
+\begin{DoxyReturn}{Returns}
+Le node json (créé par json\+\_\+node\+\_\+alloc(), à libérer par un unref() 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+
+\begin{DoxyItemize}
+\item invoqué par t\+\_\+database\+::save() Calcule le nb de parts disponibles via ce holder 
+\end{DoxyItemize}
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em $\ast$common\+\_\+} & \\
+\hline
+\mbox{\tt out}  & {\em $\ast$secret\+\_\+} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+
+\begin{DoxyItemize}
+\item L\textquotesingle{}entier pointé est incrémenté, et pas fixé dans l\textquotesingle{}absolu (pour permettre une boucle facile par l\textquotesingle{}appelant)
+\item Dans tous les cas, si les pointeurs passés sont N\+U\+LL, ne fait rien 
+\end{DoxyItemize}
+\end{DoxyNote}
+\mbox{\Hypertarget{classt__holder_aa79a75527ffcb877408da759d7b3bbd1}\label{classt__holder_aa79a75527ffcb877408da759d7b3bbd1}} 
+\index{t\+\_\+holder@{t\+\_\+holder}!compte\+\_\+parts\+\_\+distribuees@{compte\+\_\+parts\+\_\+distribuees}}
+\index{compte\+\_\+parts\+\_\+distribuees@{compte\+\_\+parts\+\_\+distribuees}!t\+\_\+holder@{t\+\_\+holder}}
+\subsubsection{\texorpdfstring{compte\+\_\+parts\+\_\+distribuees()}{compte\_parts\_distribuees()}}
+{\footnotesize\ttfamily void t\+\_\+holder\+::compte\+\_\+parts\+\_\+distribuees (\begin{DoxyParamCaption}\item[{int $\ast$}]{common\+\_\+,  }\item[{int $\ast$}]{secret\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Calcule le nb de parts distribuées. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em $\ast$common\+\_\+} & \\
+\hline
+\mbox{\tt out}  & {\em $\ast$secret\+\_\+} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+
+\begin{DoxyItemize}
+\item L\textquotesingle{}entier pointé est incrémenté, et pas fixé dans l\textquotesingle{}absolu (pour permettre une boucle facile par l\textquotesingle{}appelant)
+\item Dans tous les cas, si les pointeurs passés sont N\+U\+LL, ne fait rien
+\item Ici, on ne décompte pas les parts si le holder n\textquotesingle{}est pas \textquotesingle{}O\+P\+EN\textquotesingle{} 
+\end{DoxyItemize}
+\end{DoxyNote}
+\mbox{\Hypertarget{classt__holder_aa69ee8318b98c9b2710406a058592e5d}\label{classt__holder_aa69ee8318b98c9b2710406a058592e5d}} 
+\index{t\+\_\+holder@{t\+\_\+holder}!compte\+\_\+parts\+\_\+necessaires@{compte\+\_\+parts\+\_\+necessaires}}
+\index{compte\+\_\+parts\+\_\+necessaires@{compte\+\_\+parts\+\_\+necessaires}!t\+\_\+holder@{t\+\_\+holder}}
+\subsubsection{\texorpdfstring{compte\+\_\+parts\+\_\+necessaires()}{compte\_parts\_necessaires()}}
+{\footnotesize\ttfamily void t\+\_\+holder\+::compte\+\_\+parts\+\_\+necessaires (\begin{DoxyParamCaption}\item[{int $\ast$}]{common\+\_\+,  }\item[{int $\ast$}]{secret\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Calcule le nb de parts treshold d\textquotesingle{}après ce holder. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em $\ast$common\+\_\+} & \\
+\hline
+\mbox{\tt out}  & {\em $\ast$secret\+\_\+} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+
+\begin{DoxyItemize}
+\item L\textquotesingle{}entier pointé est fixé à la valeur connue si il était avant à -\/1
+\item Si l\textquotesingle{}entier pointé était déjà != -\/1, alors on fait juste un check de cohérence, mais rien d\textquotesingle{}autre
+\item Rappel \+: les seuils ne sont pas vraiment une propriété des holders, mais c\textquotesingle{}est par le premier holder ouvert qu\textquotesingle{}on le connait le plus tôt 
+\end{DoxyItemize}
+\end{DoxyNote}
+\mbox{\Hypertarget{classt__holder_a2cb08e23684d848bf498050de31874c2}\label{classt__holder_a2cb08e23684d848bf498050de31874c2}} 
+\index{t\+\_\+holder@{t\+\_\+holder}!get\+\_\+email@{get\+\_\+email}}
+\index{get\+\_\+email@{get\+\_\+email}!t\+\_\+holder@{t\+\_\+holder}}
+\subsubsection{\texorpdfstring{get\+\_\+email()}{get\_email()}}
+{\footnotesize\ttfamily char $\ast$ t\+\_\+holder\+::get\+\_\+email (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Renvoie le pointeur sur la chaine contenant l\textquotesingle{}email. 
+
+\begin{DoxyReturn}{Returns}
+le pointeur 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classt__holder_a6e258c7a0de7e7f4c5508af8a0aa8378}\label{classt__holder_a6e258c7a0de7e7f4c5508af8a0aa8378}} 
+\index{t\+\_\+holder@{t\+\_\+holder}!get\+\_\+id\+\_\+holder@{get\+\_\+id\+\_\+holder}}
+\index{get\+\_\+id\+\_\+holder@{get\+\_\+id\+\_\+holder}!t\+\_\+holder@{t\+\_\+holder}}
+\subsubsection{\texorpdfstring{get\+\_\+id\+\_\+holder()}{get\_id\_holder()}}
+{\footnotesize\ttfamily int t\+\_\+holder\+::get\+\_\+id\+\_\+holder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Renvoie l\textquotesingle{}ID de holder. 
+
+\begin{DoxyReturn}{Returns}
+l\textquotesingle{}ID 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classt__holder_a00ab33ab1bbe0d29f2c0ade8f767d993}\label{classt__holder_a00ab33ab1bbe0d29f2c0ade8f767d993}} 
+\index{t\+\_\+holder@{t\+\_\+holder}!get\+\_\+nb\+\_\+common@{get\+\_\+nb\+\_\+common}}
+\index{get\+\_\+nb\+\_\+common@{get\+\_\+nb\+\_\+common}!t\+\_\+holder@{t\+\_\+holder}}
+\subsubsection{\texorpdfstring{get\+\_\+nb\+\_\+common()}{get\_nb\_common()}}
+{\footnotesize\ttfamily int t\+\_\+holder\+::get\+\_\+nb\+\_\+common (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Renvoie le nombre de parts sont dispose cette holder, pour le niveau common. 
+
+\begin{DoxyReturn}{Returns}
+le nombre 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classt__holder_a01e3dcac731099c4e41a5ea375c5bbc1}\label{classt__holder_a01e3dcac731099c4e41a5ea375c5bbc1}} 
+\index{t\+\_\+holder@{t\+\_\+holder}!get\+\_\+nb\+\_\+secret@{get\+\_\+nb\+\_\+secret}}
+\index{get\+\_\+nb\+\_\+secret@{get\+\_\+nb\+\_\+secret}!t\+\_\+holder@{t\+\_\+holder}}
+\subsubsection{\texorpdfstring{get\+\_\+nb\+\_\+secret()}{get\_nb\_secret()}}
+{\footnotesize\ttfamily int t\+\_\+holder\+::get\+\_\+nb\+\_\+secret (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Renvoie le nombre de parts sont dispose cette holder, pour le niveau secret. 
+
+\begin{DoxyReturn}{Returns}
+le nombre 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classt__holder_aa7461956a8d02ec385f2c336e1625c0e}\label{classt__holder_aa7461956a8d02ec385f2c336e1625c0e}} 
+\index{t\+\_\+holder@{t\+\_\+holder}!is\+\_\+nickname@{is\+\_\+nickname}}
+\index{is\+\_\+nickname@{is\+\_\+nickname}!t\+\_\+holder@{t\+\_\+holder}}
+\subsubsection{\texorpdfstring{is\+\_\+nickname()}{is\_nickname()}}
+{\footnotesize\ttfamily int t\+\_\+holder\+::is\+\_\+nickname (\begin{DoxyParamCaption}\item[{char $\ast$}]{nn }\end{DoxyParamCaption})}
+
+
+
+Teste le nickname. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em nn} & Le nickname à comparer à celui de la holder en question \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0=ce n\textquotesingle{}est pas lui, 1=nicknames égaux 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classt__holder_a169fe1cbdec140ea60b57286f830c2c7}\label{classt__holder_a169fe1cbdec140ea60b57286f830c2c7}} 
+\index{t\+\_\+holder@{t\+\_\+holder}!save\+\_\+chunk@{save\+\_\+chunk}}
+\index{save\+\_\+chunk@{save\+\_\+chunk}!t\+\_\+holder@{t\+\_\+holder}}
+\subsubsection{\texorpdfstring{save\+\_\+chunk()}{save\_chunk()}}
+{\footnotesize\ttfamily void t\+\_\+holder\+::save\+\_\+chunk (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fichier }\end{DoxyParamCaption})}
+
+
+
+Ecrit le chunk dans le fichier. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em fichier} & Le fichier dans lequel on écrit \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+
+\begin{DoxyItemize}
+\item invoqué par t\+\_\+database\+::save()
+\item Fait le chiffrement
+\item Le \char`\"{}file\+\_\+index\char`\"{} a été fixé par le t\+\_\+database\+::save() 
+\end{DoxyItemize}
+\end{DoxyNote}
+\mbox{\Hypertarget{classt__holder_a15589251a3a9a508b0ec04bb565d24c9}\label{classt__holder_a15589251a3a9a508b0ec04bb565d24c9}} 
+\index{t\+\_\+holder@{t\+\_\+holder}!set\+\_\+email@{set\+\_\+email}}
+\index{set\+\_\+email@{set\+\_\+email}!t\+\_\+holder@{t\+\_\+holder}}
+\subsubsection{\texorpdfstring{set\+\_\+email()}{set\_email()}}
+{\footnotesize\ttfamily void t\+\_\+holder\+::set\+\_\+email (\begin{DoxyParamCaption}\item[{char $\ast$}]{em }\end{DoxyParamCaption})}
+
+
+
+Fixe l\textquotesingle{}email. 
+
+\begin{DoxyNote}{Note}
+
+\begin{DoxyItemize}
+\item Eventuellement à N\+U\+LL si on donne comme argument une chaine vide
+\item L\textquotesingle{}email stocké dans l\textquotesingle{}objet sera alloué par malloc()
+\item si l\textquotesingle{}email n\textquotesingle{}était pas N\+U\+LL avant \+: alors on suppose qu\textquotesingle{}il était déjà fixé, on doit le remplacer. L\textquotesingle{}ancien est libéré par free() 
+\end{DoxyItemize}
+\end{DoxyNote}
+\mbox{\Hypertarget{classt__holder_a0161af13d174c68725a401f12c1c2232}\label{classt__holder_a0161af13d174c68725a401f12c1c2232}} 
+\index{t\+\_\+holder@{t\+\_\+holder}!set\+\_\+nb\+\_\+common@{set\+\_\+nb\+\_\+common}}
+\index{set\+\_\+nb\+\_\+common@{set\+\_\+nb\+\_\+common}!t\+\_\+holder@{t\+\_\+holder}}
+\subsubsection{\texorpdfstring{set\+\_\+nb\+\_\+common()}{set\_nb\_common()}}
+{\footnotesize\ttfamily bool t\+\_\+holder\+::set\+\_\+nb\+\_\+common (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Modifie le nombre de parts portées par cette holder, pour le niveau common. 
+
+\begin{DoxyNote}{Note}
+
+\begin{DoxyItemize}
+\item Le nombre de part total ne doit pas dépasser C\+H\+U\+N\+K\+\_\+\+M\+A\+X\+\_\+\+P\+A\+R\+TS
+\item invoque le sss de la db 
+\end{DoxyItemize}
+\end{DoxyNote}
+\mbox{\Hypertarget{classt__holder_abd1722834ceb39539af2444612f28760}\label{classt__holder_abd1722834ceb39539af2444612f28760}} 
+\index{t\+\_\+holder@{t\+\_\+holder}!set\+\_\+nb\+\_\+secret@{set\+\_\+nb\+\_\+secret}}
+\index{set\+\_\+nb\+\_\+secret@{set\+\_\+nb\+\_\+secret}!t\+\_\+holder@{t\+\_\+holder}}
+\subsubsection{\texorpdfstring{set\+\_\+nb\+\_\+secret()}{set\_nb\_secret()}}
+{\footnotesize\ttfamily bool t\+\_\+holder\+::set\+\_\+nb\+\_\+secret (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Modifie le nombre de parts portées par cette holder, pour le niveau secret. 
+
+\begin{DoxyNote}{Note}
+
+\begin{DoxyItemize}
+\item Le nombre de part total ne doit pas dépasser C\+H\+U\+N\+K\+\_\+\+M\+A\+X\+\_\+\+P\+A\+R\+TS
+\item invoque le sss de la db 
+\end{DoxyItemize}
+\end{DoxyNote}
+\mbox{\Hypertarget{classt__holder_a08e5c20156dba916f67fb2861d0a79be}\label{classt__holder_a08e5c20156dba916f67fb2861d0a79be}} 
+\index{t\+\_\+holder@{t\+\_\+holder}!set\+\_\+password@{set\+\_\+password}}
+\index{set\+\_\+password@{set\+\_\+password}!t\+\_\+holder@{t\+\_\+holder}}
+\subsubsection{\texorpdfstring{set\+\_\+password()}{set\_password()}}
+{\footnotesize\ttfamily void t\+\_\+holder\+::set\+\_\+password (\begin{DoxyParamCaption}\item[{char $\ast$}]{mdp }\end{DoxyParamCaption})}
+
+
+
+Change le mot de passe. 
+
+\begin{DoxyNote}{Note}
+
+\begin{DoxyItemize}
+\item Cela revient à recalculer la pkey et le hash 
+\end{DoxyItemize}
+\end{DoxyNote}
+\mbox{\Hypertarget{classt__holder_a0c5f8f994532f9bdf72f870d9c66e2b1}\label{classt__holder_a0c5f8f994532f9bdf72f870d9c66e2b1}} 
+\index{t\+\_\+holder@{t\+\_\+holder}!test\+\_\+password@{test\+\_\+password}}
+\index{test\+\_\+password@{test\+\_\+password}!t\+\_\+holder@{t\+\_\+holder}}
+\subsubsection{\texorpdfstring{test\+\_\+password()}{test\_password()}}
+{\footnotesize\ttfamily bool t\+\_\+holder\+::test\+\_\+password (\begin{DoxyParamCaption}\item[{char $\ast$}]{mdp }\end{DoxyParamCaption})}
+
+
+
+Teste le MdP d\textquotesingle{}un holder par rapport à un MdP proposé 
+
+\begin{DoxyNote}{Note}
+
+\begin{DoxyItemize}
+\item Ce n\textquotesingle{}est pas cette fonction qui est utilisé pour \textquotesingle{}try\textquotesingle{}
+\item Cette focntione est utilisée pour le dialogue de changement du MdP 
+\end{DoxyItemize}
+\end{DoxyNote}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000009}{Todo}]Faire le contenu de cette fonction... \end{DoxyRefDesc}
+\mbox{\Hypertarget{classt__holder_a350849be70b8ed9acd165ec1cf9e4e96}\label{classt__holder_a350849be70b8ed9acd165ec1cf9e4e96}} 
+\index{t\+\_\+holder@{t\+\_\+holder}!try\+\_\+tardif@{try\+\_\+tardif}}
+\index{try\+\_\+tardif@{try\+\_\+tardif}!t\+\_\+holder@{t\+\_\+holder}}
+\subsubsection{\texorpdfstring{try\+\_\+tardif()}{try\_tardif()}}
+{\footnotesize\ttfamily int t\+\_\+holder\+::try\+\_\+tardif (\begin{DoxyParamCaption}\item[{char $\ast$}]{password }\end{DoxyParamCaption})}
+
+
+
+Complète les informations d\textquotesingle{}une holder qui a participé à l\textquotesingle{}ouverture common, une fois que la la base common est disponible. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em jso} & L\textquotesingle{}objet json contenant les informations \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+
+\begin{DoxyItemize}
+\item Contrôle de cohérence des informations disponibles à la fois dans le chunk et dans la base common
+\item chargement des infos supplémentaires \+: email
+\item chunk\+\_\+status inchangé, il est déjà censé re à H\+O\+L\+D\+E\+R\+\_\+\+C\+H\+U\+N\+K\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+O\+P\+EN Termine l\textquotesingle{}ouvture d\textquotesingle{}une holder qui n\textquotesingle{}a pas participer à l\textquotesingle{}ouverture de la base common. Le try a été fait après 
+\end{DoxyItemize}
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em password} & Le MdP tranmis par le dialogue try \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+
+\begin{DoxyItemize}
+\item Déchiffrement du chunk qui est alors déjà chargé en mémoire. Plus d\textquotesingle{}accès au fichier sur disque
+\item chunk\+\_\+status passe de H\+O\+L\+D\+E\+R\+\_\+\+C\+H\+U\+N\+K\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+C\+L\+O\+S\+ED à H\+O\+L\+D\+E\+R\+\_\+\+C\+H\+U\+N\+K\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+O\+P\+EN 
+\end{DoxyItemize}
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+utilise les constantes M\+P\+M\+\_\+\+T\+R\+Y\+\_\+$\ast$ comme \hyperlink{classt__database_aa0838d708635fd5edf94ecfc15b31d0c}{t\+\_\+database\+::try\+\_\+nickname()} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/holder.\+h\item 
+src/holder.\+cpp\end{DoxyCompactItemize}

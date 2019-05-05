@@ -1,0 +1,90 @@
+\hypertarget{crypto__wrapper_8cpp}{}\section{src/crypto\+\_\+wrapper.cpp File Reference}
+\label{crypto__wrapper_8cpp}\index{src/crypto\+\_\+wrapper.\+cpp@{src/crypto\+\_\+wrapper.\+cpp}}
+
+
+Wrapper pour les fonctions de cryptographie.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}crypto\+\_\+wrapper.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}debug\+\_\+file.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{crypto__wrapper_8cpp_af2e80b8de6ec1840dac4668ca5a38606}\label{crypto__wrapper_8cpp_af2e80b8de6ec1840dac4668ca5a38606}} 
+void \hyperlink{crypto__wrapper_8cpp_af2e80b8de6ec1840dac4668ca5a38606}{random\+\_\+init} ()
+\begin{DoxyCompactList}\small\item\em Initialisation du générateur aléatoire. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{crypto__wrapper_8cpp_a80be3c2e95fcbb6d57c259a80575d1bb}\label{crypto__wrapper_8cpp_a80be3c2e95fcbb6d57c259a80575d1bb}} 
+void \hyperlink{crypto__wrapper_8cpp_a80be3c2e95fcbb6d57c259a80575d1bb}{random\+\_\+deinit} ()
+\begin{DoxyCompactList}\small\item\em Libération des ressources du générateur aléatoire. \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{crypto__wrapper_8cpp_acc9e6ef0bdb455a444e6b4ce2948d6aa}{random\+\_\+bytes} (void $\ast$dest, size\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Remplit une zone mémoire d\textquotesingle{}octets aléatoires. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{crypto__wrapper_8cpp_a4ab58f4026b2cacbb37ea5285b98b542}{generate\+\_\+password} (char $\ast$dest, int n)
+\begin{DoxyCompactList}\small\item\em Génère un mot de passe aléatoire. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Wrapper pour les fonctions de cryptographie. 
+
+\begin{DoxyNote}{Note}
+
+\begin{DoxyItemize}
+\item Utilise uniquement des types standard, et pas les struct. chaine \textbackslash{}0 et unsigned char$\ast$
+\item Utilise openssl/libcrypto pour Linux
+\item le seul endroit où on doit invoquer libcrypto/openssl
+\item Fournit également la fonction de générateur aléatoire \hyperlink{crypto__wrapper_8cpp_acc9e6ef0bdb455a444e6b4ce2948d6aa}{random\+\_\+bytes()} 
+\end{DoxyItemize}
+\end{DoxyNote}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{crypto__wrapper_8cpp_a4ab58f4026b2cacbb37ea5285b98b542}\label{crypto__wrapper_8cpp_a4ab58f4026b2cacbb37ea5285b98b542}} 
+\index{crypto\+\_\+wrapper.\+cpp@{crypto\+\_\+wrapper.\+cpp}!generate\+\_\+password@{generate\+\_\+password}}
+\index{generate\+\_\+password@{generate\+\_\+password}!crypto\+\_\+wrapper.\+cpp@{crypto\+\_\+wrapper.\+cpp}}
+\subsubsection{\texorpdfstring{generate\+\_\+password()}{generate\_password()}}
+{\footnotesize\ttfamily char$\ast$ generate\+\_\+password (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Génère un mot de passe aléatoire. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em dest} & Le buffer à remplir \\
+\hline
+\mbox{\tt in}  & {\em n} & Le nombre d\textquotesingle{}octets \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+
+\begin{DoxyItemize}
+\item l\textquotesingle{}appelant fournit le buffer, et prévoit qu\textquotesingle{}on ajoutera un \textbackslash{}0 à la fin
+\item MdP utilisant a..z A..Z 0..9 
+\end{DoxyItemize}
+\end{DoxyNote}
+\mbox{\Hypertarget{crypto__wrapper_8cpp_acc9e6ef0bdb455a444e6b4ce2948d6aa}\label{crypto__wrapper_8cpp_acc9e6ef0bdb455a444e6b4ce2948d6aa}} 
+\index{crypto\+\_\+wrapper.\+cpp@{crypto\+\_\+wrapper.\+cpp}!random\+\_\+bytes@{random\+\_\+bytes}}
+\index{random\+\_\+bytes@{random\+\_\+bytes}!crypto\+\_\+wrapper.\+cpp@{crypto\+\_\+wrapper.\+cpp}}
+\subsubsection{\texorpdfstring{random\+\_\+bytes()}{random\_bytes()}}
+{\footnotesize\ttfamily void$\ast$ random\+\_\+bytes (\begin{DoxyParamCaption}\item[{void $\ast$}]{dest,  }\item[{size\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+
+
+Remplit une zone mémoire d\textquotesingle{}octets aléatoires. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em dest} & Le buffer à remplir \\
+\hline
+\mbox{\tt in}  & {\em n} & Le nombre d\textquotesingle{}octets \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+
+\begin{DoxyItemize}
+\item Fonctionne un peu comme memset()
+\item Fonction à surcharger comme on peut, avec le meilleur génrateur disponible
+\item \hyperlink{crypto__wrapper_8cpp_af2e80b8de6ec1840dac4668ca5a38606}{random\+\_\+init()} et \hyperlink{crypto__wrapper_8cpp_a80be3c2e95fcbb6d57c259a80575d1bb}{random\+\_\+deinit()} sont là pour initialiser le générateur si nécessaire 
+\end{DoxyItemize}
+\end{DoxyNote}

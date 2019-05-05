@@ -1,0 +1,48 @@
+// ************************************
+// ******* Commandes générales
+//
+init { file <STRING:filename> { common parts <INT:common_parts> { secret parts <INT:secret_parts> } } }
+save { <STRING:filename> }
+load <STRING:filename>
+try <STRING:nickname>
+quit
+check
+//show software
+//show licence <LIST:mpm,cli_parser:soft_component> 
+//help { <LIST:holders,folders,secrets:topic> }
+
+
+// ************************************
+// ******* Commandes pour gérer les porteurs
+//
+new holder <STRING:nickname>
+edit holder <STRING:nickname> password
+edit holder <STRING:nickname> common parts <INT:common_parts>
+edit holder <STRING:nickname> secret parts <INT:secret_parts>
+edit holder <STRING:nickname> email <STRING:email>
+show holders
+delete holder <STRING:nickname>
+
+
+// ************************************
+// ******* Commandes pour gérer les dossiers
+//
+cd <STRING:id>
+ls
+pwd
+new folder
+new secret
+edit secret <INT:id> update { field <STRING:field_name> }
+edit secret <INT:id> generate field <STRING:field_name> { length <INT:length> }
+edit secret <INT:id> delete field <STRING:field_name>
+edit secret <INT:id> secret <STRING:field_name>
+edit secret <INT:id> common <STRING:field_name>
+edit secret <INT:id> title
+show secret <INT:id>
+//launch secret <INT:id>
+delete <INT:id> { <LIST:force:force> }
+
+
+
+
+

@@ -1,0 +1,271 @@
+t_database() nouvelle common key=8692781056c6eac6
+t_database() nouvelle secret key=4a8eb73c0fb5b761
+t_database() nouvelle common key=e9e329a0fe0562b0
+t_database() nouvelle secret key=2b052200cd9ce5a6
+random_init() API BCrypt/Windows ok
+t_database() nouvelle common key=286c17fc95e787e5
+t_database() nouvelle secret key=fd8cf0cacc9e8de8
+random_init() API BCrypt/Windows ok
+t_database() nouvelle common key=9124a8f53dd45dfd
+t_database() nouvelle secret key=ef5da49e9c32621c
+random_init() API BCrypt/Windows ok
+random_init() API BCrypt/Windows ok
+try_nickname() nn=fifi status autre que COMMON ou SECRET
+Lu le bloc no 0 de taille 512
+Lu le bloc no 1 de taille 512
+find_chunk_holder() f=database.cpp l=560 chunk trouvé en position 1
+Lu le bloc no 2 de taille 512
+Lu le bloc no 3 de taille 512
+Lu le bloc no 4 de taille 512
+find_chunk_holder() Marqueur 'common' trouvé en position 4
+check_level() nb total de parts dispo 1/1 nécessaire 2/3
+check_level() passe de MPM_LEVEL_NONE à MPM_LEVEL_FIRST
+try_nickname() nn=riri status autre que COMMON ou SECRET
+Lu le bloc no 0 de taille 512
+find_chunk_holder() f=database.cpp l=560 chunk trouvé en position 0
+Lu le bloc no 1 de taille 512
+Lu le bloc no 2 de taille 512
+Lu le bloc no 3 de taille 512
+Lu le bloc no 4 de taille 512
+find_chunk_holder() Marqueur 'common' trouvé en position 4
+check_level() nb total de parts dispo 2/2 nécessaire 2/3
+check_level() passe de MPM_LEVEL_FIRST à MPM_LEVEL_COMMON
+open_common() création du sss_common avec quorum de 2 parts
+open_common() chargement part x=2 y=5fcbaff1
+open_common() chargement part x=1 y=ca71e17d
+open_common() f=database.cpp l=901 lsss_combine() renvoie 0
+open_common() secret retrouvé=b918271a
+read_common() taille=864 common_pos=2112
+read_common() lus=864
+read_json() next_id_holder=5 common=2 secret=3
+complete_ouverture() riri n'a pas d'email dans le json
+complete_ouverture() riri holder complété
+complete_ouverture() fifi n'a pas d'email dans le json
+complete_ouverture() fifi holder complété
+t_holder() loulou n'a pas d'email dans le json
+t_holder() loulou holder closed lus=512 file_index=2
+t_holder() chunk=ea29e1b5 partie chiffrée=a22f77f7
+t_holder() ber n'a pas d'email dans le json
+t_holder() ber holder closed lus=512 file_index=3
+t_holder() chunk=4ad07ab8 partie chiffrée=3e73fb18
+try_nickname() nn=loulou status COMMON ou SECRET
+try_tardif() chunk=ea29e1b5 partie chiffrée=a22f77f7
+try_tardif() loulou password ok
+try_tardif() loulou magic ok pkey=5a8b475b
+try_tardif() loulou part[0]=2ca26996 part[7]=4dba4bbd
+check_level() nb total de parts dispo 3/3 nécessaire 2/3
+check_level() passe de MPM_LEVEL_COMMON à MPM_LEVEL_SECRET
+open_secret() création du sss_secret avec quorum de 3 parts
+open_secret() chargement part x=70002 y=5b8990ab..ead74a9b
+open_secret() chargement part x=70001 y=a75b8ab1..2d84df70
+open_secret() chargement part x=70003 y=4dba4bbd..ff9f67a7
+open_secret() f=database.cpp l=976 lsss_combine() renvoie 0
+open_secret() secret retrouvé=116cd89b
+cparser_cmd_show_holders() fifi file index=1 chunk_status=3 id=2
+cparser_cmd_show_holders() chunk=ecde1a5b partie chiffrée=5fcbaff1
+cparser_cmd_show_holders() riri file index=0 chunk_status=3 id=1
+cparser_cmd_show_holders() chunk=28ae416b partie chiffrée=ca71e17d
+cparser_cmd_show_holders() loulou file index=2 chunk_status=3 id=3
+cparser_cmd_show_holders() chunk=ea29e1b5 partie chiffrée=2ca26996
+cparser_cmd_show_holders() ber file index=3 chunk_status=2 id=4
+cparser_cmd_show_holders() chunk=4ad07ab8 partie chiffrée=3e73fb18
+get_value() sur un champ common
+get_value() sur un champ common
+get_value() sur un champ common
+get_value() sur un champ common
+get_value() sur un champ common
+get_value() sur un champ common
+random_init() API BCrypt/Windows ok
+try_nickname() nn=riri status autre que COMMON ou SECRET
+Lu le bloc no 0 de taille 512
+find_chunk_holder() f=database.cpp l=560 chunk trouvé en position 0
+Lu le bloc no 1 de taille 512
+Lu le bloc no 2 de taille 512
+Lu le bloc no 3 de taille 512
+Lu le bloc no 4 de taille 512
+find_chunk_holder() Marqueur 'common' trouvé en position 4
+check_level() nb total de parts dispo 1/1 nécessaire 2/3
+check_level() passe de MPM_LEVEL_NONE à MPM_LEVEL_FIRST
+try_nickname() nn=fifi status autre que COMMON ou SECRET
+Lu le bloc no 0 de taille 512
+Lu le bloc no 1 de taille 512
+find_chunk_holder() f=database.cpp l=560 chunk trouvé en position 1
+Lu le bloc no 2 de taille 512
+Lu le bloc no 3 de taille 512
+Lu le bloc no 4 de taille 512
+find_chunk_holder() Marqueur 'common' trouvé en position 4
+check_level() nb total de parts dispo 2/2 nécessaire 2/3
+check_level() passe de MPM_LEVEL_FIRST à MPM_LEVEL_COMMON
+open_common() création du sss_common avec quorum de 2 parts
+open_common() chargement part x=1 y=ca71e17d
+open_common() chargement part x=2 y=5fcbaff1
+open_common() f=database.cpp l=901 lsss_combine() renvoie 0
+open_common() secret retrouvé=b918271a
+read_common() taille=864 common_pos=2112
+read_common() lus=864
+read_json() next_id_holder=5 common=2 secret=3
+complete_ouverture() riri n'a pas d'email dans le json
+complete_ouverture() riri holder complété
+complete_ouverture() fifi n'a pas d'email dans le json
+complete_ouverture() fifi holder complété
+t_holder() loulou n'a pas d'email dans le json
+t_holder() loulou holder closed lus=512 file_index=2
+t_holder() chunk=ea29e1b5 partie chiffrée=a22f77f7
+t_holder() ber n'a pas d'email dans le json
+t_holder() ber holder closed lus=512 file_index=3
+t_holder() chunk=4ad07ab8 partie chiffrée=3e73fb18
+try_nickname() nn=riri status COMMON ou SECRET
+try_nickname() riri déjà en HOLDER_CHUNK_STATUS_OPEN
+try_nickname() nn=loulou status COMMON ou SECRET
+try_tardif() chunk=ea29e1b5 partie chiffrée=a22f77f7
+try_tardif() loulou password ok
+try_tardif() loulou magic ok pkey=5a8b475b
+try_tardif() loulou part[0]=2ca26996 part[7]=4dba4bbd
+check_level() nb total de parts dispo 3/3 nécessaire 2/3
+check_level() passe de MPM_LEVEL_COMMON à MPM_LEVEL_SECRET
+open_secret() création du sss_secret avec quorum de 3 parts
+open_secret() chargement part x=70001 y=a75b8ab1..2d84df70
+open_secret() chargement part x=70002 y=5b8990ab..ead74a9b
+open_secret() chargement part x=70003 y=4dba4bbd..ff9f67a7
+open_secret() f=database.cpp l=976 lsss_combine() renvoie 0
+open_secret() secret retrouvé=116cd89b
+get_value() sur un champ common
+get_value() sur un champ common
+get_value() sur un champ common
+get_value() sur un champ common
+get_value() sur un champ common
+get_value() sur un champ common
+update() secret.cpp:177 update en mode secret value=kjjkhjhjklhjcnszopckl
+update() secret.cpp:190 aes_buffer avant chiffrement=kjjkhjhjklhjcnszopckl aes_len=32
+update() résultat lb64_bin2string() : EDnryc34tteOw8dnGKt/eKMc2zuST9NhjCLA64AwY+0=
+set_secret() en sortie de fonction, value=EDnryc34tteOw8dnGKt/eKMc2zuST9NhjCLA64AwY+0=
+save_chunk() riri part[0]=ca71e17d part[7]=a75b8ab1
+save_chunk() écriture chunk 'riri' état open pkey=b194b287
+save_chunk() chunk=28ae416b partie chiffrée=ca71e17d
+save_chunk() fifi part[0]=5fcbaff1 part[7]=5b8990ab
+save_chunk() écriture chunk 'fifi' état open pkey=e34d2115
+save_chunk() chunk=ecde1a5b partie chiffrée=5fcbaff1
+save_chunk() loulou part[0]=2ca26996 part[7]=4dba4bbd
+save_chunk() écriture chunk 'loulou' état open pkey=5a8b475b
+save_chunk() chunk=ea29e1b5 partie chiffrée=2ca26996
+save_chunk() écriture chunk 'ber' état closed
+save_chunk() chunk=4ad07ab8 partie chiffrée=3e73fb18
+save() title=user value=duchnok
+save() title=url value=http://bidule.truc.tld
+save() title=pwd value=EDnryc34tteOw8dnGKt/eKMc2zuST9NhjCLA64AwY+0=
+random_init() API BCrypt/Windows ok
+try_nickname() nn=riri status autre que COMMON ou SECRET
+Lu le bloc no 0 de taille 512
+find_chunk_holder() f=database.cpp l=560 chunk trouvé en position 0
+Lu le bloc no 1 de taille 512
+Lu le bloc no 2 de taille 512
+Lu le bloc no 3 de taille 512
+Lu le bloc no 4 de taille 512
+find_chunk_holder() Marqueur 'common' trouvé en position 4
+check_level() nb total de parts dispo 1/1 nécessaire 2/3
+check_level() passe de MPM_LEVEL_NONE à MPM_LEVEL_FIRST
+try_nickname() nn=fifi status autre que COMMON ou SECRET
+Lu le bloc no 0 de taille 512
+Lu le bloc no 1 de taille 512
+find_chunk_holder() f=database.cpp l=560 chunk trouvé en position 1
+Lu le bloc no 2 de taille 512
+Lu le bloc no 3 de taille 512
+Lu le bloc no 4 de taille 512
+find_chunk_holder() Marqueur 'common' trouvé en position 4
+check_level() nb total de parts dispo 2/2 nécessaire 2/3
+check_level() passe de MPM_LEVEL_FIRST à MPM_LEVEL_COMMON
+open_common() création du sss_common avec quorum de 2 parts
+open_common() chargement part x=1 y=ca71e17d
+open_common() chargement part x=2 y=5fcbaff1
+open_common() f=database.cpp l=901 lsss_combine() renvoie 0
+open_common() secret retrouvé=b918271a
+read_common() taille=1872 common_pos=2112
+read_common() lus=1872
+read_json() next_id_holder=5 common=2 secret=3
+complete_ouverture() riri n'a pas d'email dans le json
+complete_ouverture() riri holder complété
+complete_ouverture() fifi n'a pas d'email dans le json
+complete_ouverture() fifi holder complété
+t_holder() loulou n'a pas d'email dans le json
+t_holder() loulou holder closed lus=512 file_index=2
+t_holder() chunk=ea29e1b5 partie chiffrée=a22f77f7
+t_holder() ber n'a pas d'email dans le json
+t_holder() ber holder closed lus=512 file_index=3
+t_holder() chunk=4ad07ab8 partie chiffrée=3e73fb18
+get_value() sur un champ common
+get_value() sur un champ common
+get_value() sur un champ common
+get_value() sur un champ common
+get_value() sur un champ secret
+get_value() b64=EDnryc34tteOw8dnGKt/eKMc2zuST9NhjCLA64AwY+0= secret key=82ed32b0 iv=90e814
+get_value() value_plain=-�s����9s�Y�*����ȄP'���6�흾����
+cparser_cmd_show_holders() riri file index=0 chunk_status=3 id=1
+cparser_cmd_show_holders() chunk=28ae416b partie chiffrée=ca71e17d
+cparser_cmd_show_holders() fifi file index=1 chunk_status=3 id=2
+cparser_cmd_show_holders() chunk=ecde1a5b partie chiffrée=5fcbaff1
+cparser_cmd_show_holders() loulou file index=2 chunk_status=2 id=3
+cparser_cmd_show_holders() chunk=ea29e1b5 partie chiffrée=a22f77f7
+cparser_cmd_show_holders() ber file index=3 chunk_status=2 id=4
+cparser_cmd_show_holders() chunk=4ad07ab8 partie chiffrée=3e73fb18
+try_nickname() nn=loulou status COMMON ou SECRET
+try_tardif() chunk=ea29e1b5 partie chiffrée=a22f77f7
+try_tardif() loulou password ok
+try_tardif() loulou magic ok pkey=5a8b475b
+try_tardif() loulou part[0]=2ca26996 part[7]=4dba4bbd
+check_level() nb total de parts dispo 3/3 nécessaire 2/3
+check_level() passe de MPM_LEVEL_COMMON à MPM_LEVEL_SECRET
+open_secret() création du sss_secret avec quorum de 3 parts
+open_secret() chargement part x=70001 y=a75b8ab1..2d84df70
+open_secret() chargement part x=70002 y=5b8990ab..ead74a9b
+open_secret() chargement part x=70003 y=4dba4bbd..ff9f67a7
+open_secret() f=database.cpp l=976 lsss_combine() renvoie 0
+open_secret() secret retrouvé=116cd89b
+get_value() sur un champ common
+get_value() sur un champ common
+get_value() sur un champ common
+get_value() sur un champ common
+get_value() sur un champ secret
+get_value() b64=EDnryc34tteOw8dnGKt/eKMc2zuST9NhjCLA64AwY+0= secret key=116cd89b iv=90e814
+get_value() value_plain=kjjkhjhjklhjcnszopckl
+get_value() sur un champ secret
+get_value() b64=EDnryc34tteOw8dnGKt/eKMc2zuST9NhjCLA64AwY+0= secret key=116cd89b iv=90e814
+get_value() value_plain=kjjkhjhjklhjcnszopckl
+random_init() API BCrypt/Windows ok
+try_nickname() nn=riri status autre que COMMON ou SECRET
+Lu le bloc no 0 de taille 512
+find_chunk_holder() f=database.cpp l=560 chunk trouvé en position 0
+Lu le bloc no 1 de taille 512
+Lu le bloc no 2 de taille 512
+Lu le bloc no 3 de taille 512
+Lu le bloc no 4 de taille 512
+find_chunk_holder() Marqueur 'common' trouvé en position 4
+check_level() nb total de parts dispo 1/1 nécessaire 2/3
+check_level() passe de MPM_LEVEL_NONE à MPM_LEVEL_FIRST
+try_nickname() nn=fifi status autre que COMMON ou SECRET
+Lu le bloc no 0 de taille 512
+Lu le bloc no 1 de taille 512
+find_chunk_holder() f=database.cpp l=560 chunk trouvé en position 1
+Lu le bloc no 2 de taille 512
+Lu le bloc no 3 de taille 512
+Lu le bloc no 4 de taille 512
+find_chunk_holder() Marqueur 'common' trouvé en position 4
+check_level() nb total de parts dispo 2/2 nécessaire 2/3
+check_level() passe de MPM_LEVEL_FIRST à MPM_LEVEL_COMMON
+open_common() création du sss_common avec quorum de 2 parts
+open_common() chargement part x=1 y=ca71e17d
+open_common() chargement part x=2 y=5fcbaff1
+open_common() f=database.cpp l=901 lsss_combine() renvoie 0
+open_common() secret retrouvé=b918271a
+read_common() taille=1872 common_pos=2112
+read_common() lus=1872
+read_json() next_id_holder=5 common=2 secret=3
+complete_ouverture() riri n'a pas d'email dans le json
+complete_ouverture() riri holder complété
+complete_ouverture() fifi n'a pas d'email dans le json
+complete_ouverture() fifi holder complété
+t_holder() loulou n'a pas d'email dans le json
+t_holder() loulou holder closed lus=512 file_index=2
+t_holder() chunk=ea29e1b5 partie chiffrée=a22f77f7
+t_holder() ber n'a pas d'email dans le json
+t_holder() ber holder closed lus=512 file_index=3
+t_holder() chunk=4ad07ab8 partie chiffrée=3e73fb18

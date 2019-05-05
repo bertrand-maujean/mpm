@@ -1,0 +1,19 @@
+
+# compile les sources en obj de src/ vers build/win/
+
+#set INCLUDE=%INCLUDE%;.\inc
+
+
+objs: 
+	md build\win || cd .
+	cl /c /Fobuild\win\cparser.obj /I .\src src\cparser.c
+	cl /c /Fobuild\win\cparser_token.obj /I .\src src\cparser_token.c 
+	cl /c /Fobuild\win\cparser_token_tbl.obj /I .\src src\cparser_token_tbl.c 
+	cl /c /Fobuild\win\cparser_io_win.obj /I .\src src\cparser_io_win.c
+    cl /c /Fobuild\win\cparser_fsm.obj /I .\src src\cparser_fsm.c 
+	cl /c /Fobuild\win\cparser_line.obj /I .\src src\cparser_line.c
+		
+		
+lib:
+	link /lib /OUT:build\win\cparser.lib build\win\*.obj
+	

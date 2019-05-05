@@ -1,0 +1,67 @@
+\hypertarget{structt__chunk__holder}{}\section{t\+\_\+chunk\+\_\+holder Struct Reference}
+\label{structt__chunk__holder}\index{t\+\_\+chunk\+\_\+holder@{t\+\_\+chunk\+\_\+holder}}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structt__chunk__holder_ad2eb3bcc2105d129b7a47d327f691aaf}\label{structt__chunk__holder_ad2eb3bcc2105d129b7a47d327f691aaf}} 
+unsigned char \hyperlink{structt__chunk__holder_ad2eb3bcc2105d129b7a47d327f691aaf}{salt1} \mbox{[}32\mbox{]}
+\begin{DoxyCompactList}\small\item\em sel utilisé pour la reconnaissance des chunks de holdernes et comme IV pour le chiffrement \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structt__chunk__holder_a7267971f6a35d0116211e9d4ccafbbe3}\label{structt__chunk__holder_a7267971f6a35d0116211e9d4ccafbbe3}} 
+unsigned char \hyperlink{structt__chunk__holder_a7267971f6a35d0116211e9d4ccafbbe3}{hash} \mbox{[}32\mbox{]}
+\begin{DoxyCompactList}\small\item\em haché utilisé pour la reconnaissance des chunks = sha256(salt1 $\vert$ password) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structt__chunk__holder_ac7ad26ef12f2f6d03d160dd5cf65e420}\label{structt__chunk__holder_ac7ad26ef12f2f6d03d160dd5cf65e420}} 
+unsigned char \hyperlink{structt__chunk__holder_ac7ad26ef12f2f6d03d160dd5cf65e420}{salt2} \mbox{[}32\mbox{]}
+\begin{DoxyCompactList}\small\item\em sel utilisé pour le chiffrement \end{DoxyCompactList}\item 
+unsigned char \hyperlink{structt__chunk__holder_a170edbd4bb9ca9c4f3e87a8272e6f0df}{parts} \mbox{[}C\+H\+U\+N\+K\+\_\+\+M\+A\+X\+\_\+\+P\+A\+R\+TS $\ast$32\mbox{]}
+\begin{DoxyCompactList}\small\item\em les parts. une holderne peut porter au maximum 8 parts common+secret \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structt__chunk__holder_af777d5bbd579f6605dbd51c040ac7d03}\label{structt__chunk__holder_af777d5bbd579f6605dbd51c040ac7d03}} 
+uint64\+\_\+t \hyperlink{structt__chunk__holder_af777d5bbd579f6605dbd51c040ac7d03}{xparts} \mbox{[}C\+H\+U\+N\+K\+\_\+\+M\+A\+X\+\_\+\+P\+A\+R\+TS\mbox{]}
+\begin{DoxyCompactList}\small\item\em Les parts X. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structt__chunk__holder_a616d7141187b5a98acb2fa0e01e85f33}\label{structt__chunk__holder_a616d7141187b5a98acb2fa0e01e85f33}} 
+uint16\+\_\+t \hyperlink{structt__chunk__holder_a616d7141187b5a98acb2fa0e01e85f33}{common\+\_\+treshold}
+\begin{DoxyCompactList}\small\item\em Treshold pour l\textquotesingle{}accès public à la base. Nécessaire pour créer le sss. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structt__chunk__holder_a346269d7e81b5ea5b7917e5e6dcf64c4}\label{structt__chunk__holder_a346269d7e81b5ea5b7917e5e6dcf64c4}} 
+uint16\+\_\+t \hyperlink{structt__chunk__holder_a346269d7e81b5ea5b7917e5e6dcf64c4}{common\+\_\+nb\+\_\+parts}
+\begin{DoxyCompactList}\small\item\em nombre de part que détient cette holderne pour l\textquotesingle{}accès \char`\"{}common\char`\"{} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structt__chunk__holder_a434d05557455ce32cb6894a327f7ef2e}\label{structt__chunk__holder_a434d05557455ce32cb6894a327f7ef2e}} 
+uint16\+\_\+t \hyperlink{structt__chunk__holder_a434d05557455ce32cb6894a327f7ef2e}{secret\+\_\+treshold}
+\begin{DoxyCompactList}\small\item\em Treshold pour l\textquotesingle{}accès aux champs privés. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structt__chunk__holder_a87ebd40237441a9f7a38545ee3d31f03}\label{structt__chunk__holder_a87ebd40237441a9f7a38545ee3d31f03}} 
+uint16\+\_\+t \hyperlink{structt__chunk__holder_a87ebd40237441a9f7a38545ee3d31f03}{secret\+\_\+nb\+\_\+parts}
+\begin{DoxyCompactList}\small\item\em nombre de part que détient cette holderne pour l\textquotesingle{}accès \char`\"{}secret\char`\"{} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structt__chunk__holder_aed75161f410191e3fe20ee75515f3dc5}\label{structt__chunk__holder_aed75161f410191e3fe20ee75515f3dc5}} 
+uint64\+\_\+t \hyperlink{structt__chunk__holder_aed75161f410191e3fe20ee75515f3dc5}{common\+\_\+magic}
+\begin{DoxyCompactList}\small\item\em numéro choisi aléatoirement, pour la base, stocké dans chaque chunk peron, utilisé pour le chunk de repérage de la base common \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structt__chunk__holder_a25628b321342f8c061636ff5b72e96a9}\label{structt__chunk__holder_a25628b321342f8c061636ff5b72e96a9}} 
+uint16\+\_\+t \hyperlink{structt__chunk__holder_a25628b321342f8c061636ff5b72e96a9}{id\+\_\+holder}
+\begin{DoxyCompactList}\small\item\em ID of this holder, reference to the common chunk. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structt__chunk__holder_a6b76101b323e5244262d5dd34e923b59}\label{structt__chunk__holder_a6b76101b323e5244262d5dd34e923b59}} 
+unsigned char \hyperlink{structt__chunk__holder_a6b76101b323e5244262d5dd34e923b59}{padding} \mbox{[}56\mbox{]}
+\begin{DoxyCompactList}\small\item\em Parce qu\textquotesingle{}on veut des chunks de 512 octets. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structt__chunk__holder_ac1b22237159f2428bc02644b3ad9ac85}\label{structt__chunk__holder_ac1b22237159f2428bc02644b3ad9ac85}} 
+uint64\+\_\+t \hyperlink{structt__chunk__holder_ac1b22237159f2428bc02644b3ad9ac85}{version}
+\begin{DoxyCompactList}\small\item\em Version du format de fichier. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structt__chunk__holder_aab086f744da859566586d32032ff2514}\label{structt__chunk__holder_aab086f744da859566586d32032ff2514}} 
+uint64\+\_\+t \hyperlink{structt__chunk__holder_aab086f744da859566586d32032ff2514}{magic}
+\begin{DoxyCompactList}\small\item\em utilisé pour vérifier que le décodage a bien fonctionné. Car attention, on ne stocke pas le nickname ici... \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structt__chunk__holder_a170edbd4bb9ca9c4f3e87a8272e6f0df}\label{structt__chunk__holder_a170edbd4bb9ca9c4f3e87a8272e6f0df}} 
+\index{t\+\_\+chunk\+\_\+holder@{t\+\_\+chunk\+\_\+holder}!parts@{parts}}
+\index{parts@{parts}!t\+\_\+chunk\+\_\+holder@{t\+\_\+chunk\+\_\+holder}}
+\subsubsection{\texorpdfstring{parts}{parts}}
+{\footnotesize\ttfamily unsigned char t\+\_\+chunk\+\_\+holder\+::parts\mbox{[}C\+H\+U\+N\+K\+\_\+\+M\+A\+X\+\_\+\+P\+A\+R\+TS $\ast$32\mbox{]}}
+
+
+
+les parts. une holderne peut porter au maximum 8 parts common+secret 
+
+\begin{DoxyNote}{Note}
+Everything below is encoded with A\+ES using pkey=S\+H\+A256(nickname $\vert$ salt2 $\vert$ password) 
+\end{DoxyNote}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/holder.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,131 @@
+CC			=gcc
+LD			=gcc
+CFLAGS		=-g -fPIC -fstack-protector
+# -Wpedantic -Wextra -W -Wall 
+LDFLAGS		= -fPIE
+BUILD		= ../build/linux/
+INC			= -I/usr/local/include  -iquote $(BUILD) 
+INC			+= -iquote ../../cli_parser-0.5/inc/ -iquote ../../cli_parser-0.5/src/
+INC			+= -I/usr/include/json-glib-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+LIB			= -L/usr/local/lib/ber/ -l:lib_sss.a -l:lb64.a -l:libtdll.a
+LIB			+= -l:libjansson.a
+LIB			+= -lcrypto
+LIB			+= -L./cli_parser-0.5/build/unix/lib/ -l:libcparser.a -lstdc++ 
+LIB			+= -ljson-glib-1.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0 
+PYTHON		= python3.5
+MKPARSER	= ../../cli_parser-0.5/scripts/mk_parser.py
+OBJS		= database.o holder.o debug_file.o crypto_wrapper.o cparser_tree.o cli_callbacks.o
+OBJS		+= secret.o messages_mpm.o mpm.o 
+BOBJS		= $(addprefix $(BUILD),$(OBJS))
+DEFS		= -DMPM_OPENSSL -DNDEBUG -DMPM_GLIB_JSON
+
+
+# Autres define :
+#    -DMPM_JANSSON ou -DMPM_GLIB_JSON    et     MPM_WINCRYPTO ou -DMPM_OPENSSL
+#    -DDEBUG  
+# Autres librairies :
+# -ljson-glib-1.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0 
+#
+# Autres includes :
+# -I/usr/include/json-glib-1.0 -I/usr/include/glib-2.0 
+# -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+	 
+$(BUILD)mpm: $(BOBJS)
+	$(LD) $(LDFLAGS) -o $(BUILD)mpm $(BOBJS) $(LIB)
+
+$(BUILD)mpm.o: mpm.h mpm.cpp database.h holder.h secret.h
+	$(CC) $(CFLAGS) $(INC) $(DEFS) -o $(BUILD)mpm.o -c mpm.cpp
+
+$(BUILD)holder.o: holder.cpp holder.h
+	$(CC) $(CFLAGS) $(INC) $(DEFS) -o $(BUILD)holder.o -c holder.cpp
+
+$(BUILD)database.o: database.cpp database.h
+	$(CC) $(CFLAGS) $(INC) $(DEFS) -o $(BUILD)database.o -c database.cpp
+
+$(BUILD)crypto_wrapper.o: crypto_wrapper.cpp crypto_wrapper.h
+	$(CC) $(CFLAGS) $(INC) $(DEFS) -o $(BUILD)crypto_wrapper.o -c crypto_wrapper.cpp
+	
+$(BUILD)secret.o: secret.cpp secret.h
+	$(CC) $(CFLAGS) $(INC) $(DEFS) -o $(BUILD)secret.o -c secret.cpp
+
+$(BUILD)debug_file.o: debug_file.h debug_file.c
+	$(CC) $(CFLAGS) $(INC) $(DEFS) -o $(BUILD)debug_file.o -c debug_file.c
+
+$(BUILD)cli_callbacks.o: cli_callbacks.cpp $(BUILD)messages_mpm.o
+	$(CC) $(CFLAGS) $(INC) $(DEFS) -o $(BUILD)cli_callbacks.o -c cli_callbacks.cpp	
+
+$(BUILD)messages_mpm.o: messages.json
+	$(PYTHON) ./compile_messages.py c messages.json > $(BUILD)messages_mpm.c
+	$(PYTHON) ./compile_messages.py h messages.json > $(BUILD)messages_mpm.h
+	$(CC) $(CFLAGS) -o $(BUILD)messages_mpm.o -c $(BUILD)messages_mpm.c
+
+$(BUILD)cparser_tree.c: mpm.cli
+	$(MKPARSER) mpm.cli
+	mv cparser_tree.c $(BUILD) 
+	mv cparser_tree.h $(BUILD) 
+
+$(BUILD)cparser_tree.o: $(BUILD)cparser_tree.c
+	$(CC) $(CFLAGS) $(INC) -o $(BUILD)cparser_tree.o -c $(BUILD)cparser_tree.c
+
+clean:
+	rm -f $(BUILD)* || true
+
+doc:
+	doxygen >/dev/null 2>/dev/null
+
+	
+#mpm: mpm.o database.o holder.o debug_file.o crypto_wrapper.o cparser_tree.o cli_callbacks.o secret.o messages_mpm.o
+#	g++ -Wpedantic -Wall -Wextra -g -o mpm  messages_mpm.o mpm.o database.o holder.o debug_file.o crypto_wrapper.o cparser_tree.o cli_callbacks.o secret.o \
+#		 -static-libgcc -static-libstdc++ \
+#	 -L/usr/lib/x86_64-linux-gnu/ \
+#	 -Wl,-Bdynamic -ljson-glib-1.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0 \
+#	 -Wl,-Bdynamic -lcrypto -ldl \
+#	 -I/usr/include/json-glib-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include \
+#	 -L./cli_parser-0.5/build/unix/lib/ -l:libcparser.a \
+#	 -L/usr/local/lib/ber/ -l:lib_sss.a -l:lb64.a -l:libtdll.a -ljansson
+	
+	
+#cparser_tree.c: mpm.cli
+#	../cli_parser-0.5/scripts/mk_parser.py mpm.cli
+
+#cparser_tree.o: cparser_tree.c
+#	gcc -fstack-protector -fPIE -fPIC -DNDEBUG -g -c -o cparser_tree.o cparser_tree.c -isystem ../cli_parser-0.5/inc -iquote ../cli_parser-0.5/src/
+
+	
+
+	
+#cli_callbacks.o: cli_callbacks.cpp
+#	g++ -fstack-protector -fPIE -fPIC -g -c -o cli_callbacks.o cli_callbacks.cpp \
+#	-I/usr/include/json-glib-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include \
+#	-isystem ./cli_parser-0.5/inc -iquote ./cli_parser-0.5/src/
+
+
+	
+
+#mpm.o: mpm.h mpm.cpp database.h secret.h holder.h cparser_tree.c messages_mpm.o
+#	gcc -fstack-protector -fPIE -fPIC -Wpedantic -Wall -Wextra -g -c -o mpm.o mpm.cpp \
+#	-isystem ./cli_parser-0.5/inc -iquote ./cli_parser-0.5/src \
+#	-I/usr/include/json-glib-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include \
+#	-lstdc++
+
+#secret.o: secret.cpp secret.h
+#	g++ -fstack-protector -fPIE -fPIC -g -c -o secret.o secret.cpp \
+#	-I/usr/include/json-glib-1.0 -I/usr/include/glib-2.0 #-I/usr/lib/x86_64-linux-gnu/glib-2.0/include \
+#	-isystem ./cli_parser-0.5/inc -iquote ./cli_parser-0.5/src/
+
+
+#database.o: database.cpp database.h
+#	gcc -fstack-protector -fPIE -fPIC -Wpedantic -Wall -Wextra -g -c -o database.o database.cpp \
+#	-isystem ./cli_parser-0.5/inc -iquote ./cli_parser-0.5/src/ \
+#	-I/usr/include/json-glib-1.0 -I/usr/include/glib-2.0 #-I/usr/lib/x86_64-linux-gnu/glib-2.0/include 
+
+#crypto_wrapper.o: crypto_wrapper.h crypto_wrapper.cpp
+#	gcc -fstack-protector -fPIE -fPIC -Wpedantic -Wall -Wextra -g -c -o crypto_wrapper.o crypto_wrapper.cpp
+
+
+
+#holder.o: holder.cpp
+#	gcc -fstack-protector -fPIE -fPIC -Wpedantic -Wall -Wextra -g -c -o holder.o holder.cpp \
+#	-isystem ./cli_parser-0.5/inc -iquote ./cli_parser-0.5/src \
+#	-I/usr/include/json-glib-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+

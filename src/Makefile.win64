@@ -1,0 +1,93 @@
+CC			=cl.exe
+LD			=link.exe
+CFLAGS		= -Zi
+LDFLAGS		= /NODEFAULTLIB:LIBCMT /debug
+BUILD		= ../build/win/
+BUILDW		= ..\build\win\ 
+INC			= /I "c:\vs_ber\include" /I $(BUILD) 
+LIBS		= /LIBPATH:"C:/vs_ber/lib" bcrypt.lib cparser.lib jansson.lib lb64.lib lib_sss.lib tdll.lib
+PYTHON		= python.exe
+MKPARSER	= c:\users\bmaujean\Desktop\cli_parser-0.5\scripts\mk_parser.py
+OBJS		= $(BUILD)database.obj $(BUILD)holder.obj $(BUILD)debug_file.obj $(BUILD)crypto_wrapper.obj 
+OBJS		= $(OBJS) $(BUILD)cparser_tree.obj $(BUILD)cli_callbacks.obj 
+OBJS		= $(OBJS) $(BUILD)secret.obj $(BUILD)messages_mpm.obj $(BUILD)mpm.obj
+DEFS		= -DNDEBUG -DMPM_JANSSON -DMPM_WINCRYPTO
+
+$(BUILD)mpm.exe: $(OBJS)
+	$(LD) $(LDFLAGS) /OUT:$(BUILD)mpm.exe $(LIBS) $(OBJS) 
+	
+$(BUILD)mpm.obj: mpm.cpp mpm.h
+	$(CC) $(CFLAGS) $(INC) $(DEFS) /Fo$(BUILD)mpm.obj -c mpm.cpp
+
+$(BUILD)holder.obj: holder.cpp holder.h
+	$(CC) $(CFLAGS) $(INC) $(DEFS) /Fo$(BUILD)holder.obj -c holder.cpp
+
+$(BUILD)database.obj: database.cpp database.h
+	$(CC) $(CFLAGS) $(INC) $(DEFS) /Fo$(BUILD)database.obj -c database.cpp
+
+$(BUILD)crypto_wrapper.obj: crypto_wrapper.cpp crypto_wrapper.h
+	$(CC) $(CFLAGS) $(INC) $(DEFS) /Fo$(BUILD)crypto_wrapper.obj -c crypto_wrapper.cpp
+	
+$(BUILD)secret.obj: secret.cpp secret.h
+	$(CC) $(CFLAGS) $(INC) $(DEFS) /Fo$(BUILD)secret.obj -c secret.cpp
+
+$(BUILD)debug_file.obj: debug_file.h debug_file.c
+	$(CC) $(CFLAGS) $(INC) $(DEFS) /Fo$(BUILD)debug_file.obj -c debug_file.c
+
+$(BUILD)cli_callbacks.obj: cli_callbacks.cpp $(BUILD)messages_mpm.obj
+	$(CC) $(CFLAGS) $(INC) $(DEFS) /Fo$(BUILD)cli_callbacks.obj -c cli_callbacks.cpp	
+
+$(BUILD)messages_mpm.obj: messages.json
+	REM $(PYTHON) ./compile_messages.py c messages.json > $(BUILD)messages_mpm.c
+	REM $(PYTHON) ./compile_messages.py h messages.json > $(BUILD)messages_mpm.h
+	REM Récupère depuis le build Linux car pb de Python dans le Windows
+	copy ..\build\linux\messages_mpm.c $(BUILDW)
+	copy ..\build\linux\messages_mpm.h $(BUILDW)
+	$(CC) $(CFLAGS) /Fo$(BUILD)messages_mpm.obj -c $(BUILD)messages_mpm.c
+
+$(BUILD)cparser_tree.obj: $(BUILD)cparser_tree.c
+	$(CC) $(CFLAGS) $(INC) $(DEFS) /Fo$(BUILD)cparser_tree.obj -c $(BUILD)cparser_tree.c	
+	
+$(BUILD)cparser_tree.c: mpm.cli
+	REM $(PYTHON) $(MKPARSER) mpm.cli
+	REM move cparser_tree.c $(BUILD) 
+	REM move cparser_tree.h $(BUILD)
+	REM Récupère les fichiers du build Linux car pas de Python 2.7 sous Windows
+	REM et le script est en Python 2.7...
+	copy ..\build\linux\cparser_tree.c $(BUILDW)
+	copy ..\build\linux\cparser_tree.h $(BUILDW)
+	
+clean:
+	del ..\build\win\*.obj || cd .
+
+#------------------------------------
+
+#mpm.exe : mpm.obj crypto_wrapper.obj
+#	link /NODEFAULTLIB:LIBCMT /OUT:mpm.exe /LIBPATH:"C:\vs_ber\lib" bcrypt.lib cparser.lib jansson.lib lb64.lib lib_sss.lib tdll.lib cparser_tree.obj crypto_wrapper.obj database.obj holder.obj secret.obj debug_file.obj cli_callbacks.obj messages_mpm.obj mpm.obj 
+	
+# Coup du "NODEFAULTLIB" pour éviter des syllboles __imp_* manquants
+# pas compris mais solution trouvée ici :
+# https://stackoverflow.com/questions/46585662/windows-linking-to-libcurl-a-lib
+	
+	
+#mpm.obj : database.cpp holder.cpp 
+#	cl /c /Fodatabase.obj /I "c:\vs_ber\include" database.cpp
+#	cl /c /Foholder.obj /I "c:\vs_ber\include" holder.cpp
+#	cl /c /Fosecret.obj /I "c:\vs_ber\include" secret.cpp
+#	cl /c /Fodebug_file.obj /I "c:\vs_ber\include" debug_file.c
+#	cl /c /Fompm.obj /I "c:\vs_ber\include" mpm.cpp
+#	cl /c /Focparser_tree.obj /I "c:\vs_ber\include" /I "c:\vs_ber\include\ber" cparser_tree.c
+#	cl /c /Focli_callbacks.obj /I "c:\vs_ber\include" cli_callbacks.cpp
+#	cl /c /Fomessages_mpm.obj /I "c:\vs_ber\include" messages_mpm.c	
+
+#crypto_wrapper.obj: crypto_wrapper.cpp crypto_wrapper.h
+#	cl /c /Focrypto_wrapper.obj /I "c:\vs_ber\include" /DMPM_WINCRYPTO crypto_wrapper.cpp
+	
+#messages_mpm.o: messages.inc
+#	./compile_messages.py c messages.inc > messages_mpm.c
+#	gcc -c -o messages_mpm.o messages_mpm.c
+#	./compile_messages.py h messages.inc > messages_mpm.h
+
+#clean:
+#	del *.obj || cd .
+	

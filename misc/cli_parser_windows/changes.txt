@@ -1,0 +1,24 @@
+#if !(defined(_WIN32))
+  #include <unistd.h>
+#endif
+
+
+#if !(defined(_WIN32))
+#include <glob.h>
+#endif
+
+dans cparser_token.c, encadrer tout le code de cparser_complete_file () par #ifndef (sauf le return)
+
+cparser.c:451 et dans cparser_token:405 (environ)
+ch_ptr = (char*)match->param + token->token_len;
+
+
+Dasn cparser_io_win.c, le type ssize_t n'existe pas :
+#if defined(_MSC_VER)
+#include <BaseTsd.h>
+typedef SSIZE_T ssize_t;
+#endif
+
+
+Ici, explication du mode canonique du terminal, différence Unix/Win :
+https://stackoverflow.com/questions/46142246/getchar-with-non-canonical-mode-on-unix-and-windows
